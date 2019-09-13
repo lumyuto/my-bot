@@ -13,39 +13,54 @@ class Bot extends BaseBot {
                     .then(json => {
                         const DPLDirective = new Bot.Directive.DPL.RenderDocument()
                         DPLDirective.setDocument(document)
+
+                        const animationCommand = new Bot.Directive.DPL.Commands.AnimationCommand()
+                        animationCommand.setAttribute('width');
+                        animationCommand.setFrom('10dp');
+                        animationCommand.setTo('100dp');
+                        animationCommand.setEasing('ease-in');
+                        animationCommand.setRepeatCount('3');
+                        animationCommand.setRepeatMode('reverse');
+                        animation.addCompleteCommands(new Bot.Directive.DPL.Commands.SendEventCommand())
+
                         return {
-                            directives: [DPLDirective]
+                            directives: [DPLDirective, animationCommand]
                         };
                     })
             });
 
-            this.addIntentHandler('personal_income_tax.inquiry', () => {
-                let loc = this.getSlot('location');
-                let monthlySalary = this.getSlot('monthlysalary');
+            this.addIntentHandler('UserEvent', (event) => {
+                console.log('UserEvent recevied');
+                console.log(event)
+            })
 
-                if (!monthlySalary) {
-                    this.nlu.ask('monthlySalary');
-                    //  let card = new Bot.Card.TextCard('你工资多少呢');
+            // this.addIntentHandler('personal_income_tax.inquiry', () => {
+            //     let loc = this.getSlot('location');
+            //     let monthlySalary = this.getSlot('monthlysalary');
 
-                    //  如果有异步操作，可以返回一个promise
-                    return new Promise(function (resolve, reject) {
-                        resolve({
-                            directives: [this.getTemplate1('你工资多少呢')],
-                            outputSpeech: '你工资多少呢'
-                        });
-                    });
-                }
+            //     if (!monthlySalary) {
+            //         this.nlu.ask('monthlySalary');
+            //         //  let card = new Bot.Card.TextCard('你工资多少呢');
 
-                if (!loc) {
-                    //  let card = new Bot.Card.TextCard('你在哪呢');
-                    this.nlu.ask('location');
-                    return {
-                        directives: [this.getTemplate1('你在哪呢')],
-                        outputSpeech: '你在哪呢'
-                    };
+            //         //  如果有异步操作，可以返回一个promise
+            //         return new Promise(function (resolve, reject) {
+            //             resolve({
+            //                 directives: [this.getTemplate1('你工资多少呢')],
+            //                 outputSpeech: '你工资多少呢'
+            //             });
+            //         });
+            //     }
 
-                }
-            });
+            //     if (!loc) {
+            //         //  let card = new Bot.Card.TextCard('你在哪呢');
+            //         this.nlu.ask('location');
+            //         return {
+            //             directives: [this.getTemplate1('你在哪呢')],
+            //             outputSpeech: '你在哪呢'
+            //         };
+
+            //     }
+            // });
     }
     /**
      *  获取文本展现模板
