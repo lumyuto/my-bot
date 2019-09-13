@@ -53,3 +53,5 @@ class Bot extends BaseBot {
         return renderTemplate;
     }
 }
+
+module.exports = Bot
