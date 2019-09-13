@@ -58,9 +58,9 @@ class Bot extends BaseBot {
 
             this.addLaunchHandler(() => {
 
-                const DPLDirective = new Bot.Directive.DPL.RenderDocument({
-                    getData: () => DPL
-                })
+                const DPLDirective = new Bot.Directive.DPL.RenderDocument()
+                const document = new Bot.Directive.DPL.Document(DPL)
+                DPLDirective.setDocument(document)
                 return {
                     directives: [DPLDirective],
                     outputSpeech: '欢迎使用!'
