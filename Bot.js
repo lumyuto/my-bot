@@ -21,12 +21,12 @@ class Bot extends BaseBot {
                         animationCommand.setComponentId("Image01")
 
                         // animationCommand.setEasing('ease-in');
-                        // animationCommand.setRepeatCount('3');
+                        animationCommand.setRepeatCount('1');
                         // animationCommand.setRepeatMode('reverse');
 
                         SendEventCommand = new Bot.Directive.DPL.Commands.SendEventCommand()
-                        SendEventCommand.setComponentId("Image01")
-                        animation.addCompleteCommands([SendEventCommand])
+                        // SendEventCommand.setComponentId("Image01")
+                        // animation.addCompleteCommands([SendEventCommand])
 
                         const DPLExecute = new Bot.Directive.DPL.ExecuteCommands()
                         DPLExecute.setCommands(animationCommand)
