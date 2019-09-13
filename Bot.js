@@ -18,6 +18,8 @@ class Bot extends BaseBot {
                         animationCommand.setAttribute('width');
                         animationCommand.setFrom('100dp');
                         animationCommand.setTo('300dp');
+                        animationCommand.setComponentId("Image01")
+                        
                         // animationCommand.setEasing('ease-in');
                         // animationCommand.setRepeatCount('3');
                         // animationCommand.setRepeatMode('reverse');
