@@ -8,12 +8,13 @@
         "items": [
             {
                 "type": "Image",
+                "componentId": "Image01",
                 "position": "absolute",
                 "top": "0dp",
                 "left": "0dp",
                 "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_18-57-352.jpg",
                 "height": "100%",
-                "width": "100%"
+                "width": "10dp"
             },
             {
                 "type": "Container",
