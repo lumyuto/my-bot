@@ -8,14 +8,15 @@ class Bot extends BaseBot {
             super(postData);
 
             this.addLaunchHandler(() => {
-                return new Bot.Directive.DPL.Document().getDocumentFromPath('./launchDPL.json')
-                .then(document => {
-                    const DPLDirective = new Bot.Directive.DPL.RenderDocument()
-                    DPLDirective.setDocument(document)
-                    return {
-                        directives: [DPLDirective]
-                    };
-                })
+                document = new Bot.Directive.DPL.Document()
+                return document.getDocumentFromPath('./launchDPL.json')
+                    .then(json => {
+                        const DPLDirective = new Bot.Directive.DPL.RenderDocument()
+                        DPLDirective.setDocument(document)
+                        return {
+                            directives: [DPLDirective]
+                        };
+                    })
             });
 
             this.addIntentHandler('personal_income_tax.inquiry', () => {
