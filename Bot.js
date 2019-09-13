@@ -23,8 +23,11 @@ class Bot extends BaseBot {
                         animationCommand.setRepeatMode('reverse');
                         animation.addCompleteCommands(new Bot.Directive.DPL.Commands.SendEventCommand())
 
+                        const DPLExecute = new Bot.Directive.DPL.ExecuteCommands()
+                        DPLExecute.setCommands(animationCommand)
                         return {
-                            directives: [DPLDirective, animationCommand]
+                            directives: [DPLDirective, DPLExecute],
+                            outputSpeech: '测试一下'
                         };
                     })
             });
