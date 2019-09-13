@@ -26,7 +26,7 @@ class Bot extends BaseBot {
                         const DPLExecute = new Bot.Directive.DPL.ExecuteCommands()
                         DPLExecute.setCommands(animationCommand)
                         return {
-                            directives: [DPLDirective, DPLExecute],
+                            directives: [DPLDirective],
                             outputSpeech: '测试一下'
                         };
                     })
