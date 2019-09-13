@@ -8,7 +8,7 @@ class Bot extends BaseBot {
             super(postData);
 
             this.addLaunchHandler(() => {
-                document = new Bot.Directive.DPL.Document()
+                const document = new Bot.Directive.DPL.Document()
                 return document.getDocumentFromPath('./launchDPL.json')
                     .then(json => {
                         const DPLDirective = new Bot.Directive.DPL.RenderDocument()
