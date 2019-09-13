@@ -15,18 +15,18 @@ class Bot extends BaseBot {
                         DPLDirective.setDocument(document)
 
                         const animationCommand = new Bot.Directive.DPL.Commands.AnimationCommand()
-                        animationCommand.setAttribute('width');
+                        animationCommand.setAttribute('top');
                         animationCommand.setFrom('100dp');
                         animationCommand.setTo('300dp');
                         animationCommand.setComponentId("Image01")
-                        
+
                         // animationCommand.setEasing('ease-in');
                         // animationCommand.setRepeatCount('3');
                         // animationCommand.setRepeatMode('reverse');
 
-                        // SendEventCommand = new Bot.Directive.DPL.Commands.SendEventCommand()
-                        // SendEventCommand.setComponentId("Image01")
-                        // animation.addCompleteCommands(SendEventCommand)
+                        SendEventCommand = new Bot.Directive.DPL.Commands.SendEventCommand()
+                        SendEventCommand.setComponentId("Image01")
+                        animation.addCompleteCommands([SendEventCommand])
 
                         const DPLExecute = new Bot.Directive.DPL.ExecuteCommands()
                         DPLExecute.setCommands(animationCommand)
