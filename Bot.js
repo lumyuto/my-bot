@@ -14,17 +14,17 @@ class Bot extends BaseBot {
                         const DPLDirective = new Bot.Directive.DPL.RenderDocument()
                         DPLDirective.setDocument(document)
 
-                        const animationCommand = new Bot.Directive.DPL.Commands.AnimationCommand()
-                        animationCommand.setAttribute('width');
-                        animationCommand.setFrom('10dp');
-                        animationCommand.setTo('100dp');
-                        animationCommand.setEasing('ease-in');
-                        animationCommand.setRepeatCount('3');
-                        animationCommand.setRepeatMode('reverse');
-                        animation.addCompleteCommands(new Bot.Directive.DPL.Commands.SendEventCommand())
+                        // const animationCommand = new Bot.Directive.DPL.Commands.AnimationCommand()
+                        // animationCommand.setAttribute('width');
+                        // animationCommand.setFrom('10dp');
+                        // animationCommand.setTo('100dp');
+                        // animationCommand.setEasing('ease-in');
+                        // animationCommand.setRepeatCount('3');
+                        // animationCommand.setRepeatMode('reverse');
+                        // animation.addCompleteCommands(new Bot.Directive.DPL.Commands.SendEventCommand())
 
-                        const DPLExecute = new Bot.Directive.DPL.ExecuteCommands()
-                        DPLExecute.setCommands(animationCommand)
+                        // const DPLExecute = new Bot.Directive.DPL.ExecuteCommands()
+                        // DPLExecute.setCommands(animationCommand)
                         return {
                             directives: [DPLDirective],
                             outputSpeech: '测试一下'
