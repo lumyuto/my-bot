@@ -1,0 +1,49 @@
+{
+    "type": "DPL",
+    "version": "1.0",
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Image",
+                "position": "absolute",
+                "top": "0dp",
+                "left": "0dp",
+                "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_18-57-352.jpg",
+                "height": "100%",
+                "width": "100%"
+            },
+            {
+                "type": "Container",
+                "width": "100%",
+                "height": "100%",
+                "items": [
+                    {
+                        "type": "Header",
+                        "headerTitle": "你知道吗？",
+                        "headerImage": "https://skillstore.cdn.bcebos.com/icon/23/fc7581b7-b505-1f44-ab52-3d9f5e567dfd.png",
+                        "hasBackIcon": true
+                    },
+                    {
+                        "type": "Container",
+                        "height": "80%",
+                        "width": "90%",
+                        "margin-left": "5%",
+                        "margin-top": "5%",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "text": "判断鸡蛋有没有熟，可以转个圈，可以转的是熟的，不能的，就是没熟的。并且，新的鸡蛋壳不好剥开，容易将蛋白也剥下来。老的，也就是尘鸡蛋比较容易剥开。",
+                                "font-size": "45dp",
+                                "font-style": "normal",
+                                "letter-specing": "25dp"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
