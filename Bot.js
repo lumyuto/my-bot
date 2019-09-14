@@ -25,6 +25,7 @@ class Bot extends BaseBot {
                             SendEventCommand = new Bot.Directive.DPL.Commands.SendEventCommand()    
                         } catch (error) {
                             console.log(error)
+                            console.log(Bot.Directive.DPL.Commands)
                         }
                         
                         // SendEventCommand.setComponentId("Image01")
