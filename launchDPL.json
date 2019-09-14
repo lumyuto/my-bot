@@ -46,19 +46,27 @@
                 ],
                 "onLoaded": [
                     {
-                            "type": "Animation",
-                            "componentId": "Image01",
-                            "attribute": "width",
-                            "from": "100dp",
-                            "to": "300dp",
-                            "easing": "linear",
-                            "duration": 1000,
-                            "repeatCount": "2",
-                            "repeatMode": "reverse",
-                            "onComplete": [{
+                        "type": "Sequential",
+                        "delayInMilliseconds": 1000,
+                        "repeatCount": 2,
+                        "commands": [
+                            {
+                                "type": "Animation",
+                                "componentId": "Image01",
+                                "attribute": "width",
+                                "from": "100dp",
+                                "to": "300dp",
+                                "easing": "linear",
+                                "duration": 1000,
+                                "repeatCount": "2",
+                                "repeatMode": "reverse",
+                                "onComplete": []
+                            },
+                            {
                                 "type": "SendEvent",
                                 "componentId": "Image01"
-                            }]
+                            }
+                        ]
                     }
                 ]
             }
