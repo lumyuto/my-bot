@@ -48,20 +48,8 @@
                     {
                         "type": "Sequential",
                         "delayInMilliseconds": 3000,
-                        "repeatCount": 4,
+                        "repeatCount": 1,
                         "commands": [
-                            {
-                                "type": "Animation",
-                                "componentId": "Image01",
-                                "attribute": "width",
-                                "from": "100dp",
-                                "to": "300dp",
-                                "easing": "linear",
-                                "duration": 3000,
-                                "repeatCount": "2",
-                                "repeatMode": "reverse",
-                                "onComplete": []
-                            },
                             {
                                 "type": "SendEvent",
                                 "componentId": "Image01"
