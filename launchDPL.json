@@ -36,8 +36,8 @@
                         "items": [
                             {
                                 "type": "Text",
-                                "text": "判断鸡蛋有没有熟，可以转个圈，可以转的是熟的，不能的，就是没熟的。并且，新的鸡蛋壳不好剥开，容易将蛋白也剥下来。老的，也就是尘鸡蛋比较容易剥开。",
-                                "font-size": "45dp",
+                                "text": "1",
+                                "font-size": "80dp",
                                 "font-style": "normal",
                                 "letter-specing": "25dp"
                             }

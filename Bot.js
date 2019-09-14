@@ -13,22 +13,8 @@ class Bot extends BaseBot {
                     .then(json => {
                         const DPLDirective = new Bot.Directive.DPL.RenderDocument()
                         DPLDirective.setDocument(document)
-
-                        const animationCommand = new Bot.Directive.DPL.Commands.AnimationCommand()
-                        animationCommand.setAttribute('top');
-                        animationCommand.setFrom('100dp');
-                        animationCommand.setTo('300dp');
-                        animationCommand.setComponentId("Image01")
-                        animationCommand.setRepeatCount('1');
-
-                        const sendEventCommand = new Bot.Directive.DPL.Commands.SendEventCommand()
-                        sendEventCommand.setComponentId("Image01")
-                        animationCommand.addCompleteCommands(sendEventCommand)
-
-                        const DPLExecute = new Bot.Directive.DPL.ExecuteCommands()
-                        DPLExecute.setCommands(animationCommand)
                         return {
-                            directives: [DPLDirective, DPLExecute],
+                            directives: [DPLDirective],
                             outputSpeech: '测试一下'
                         };
                     })
@@ -36,7 +22,19 @@ class Bot extends BaseBot {
 
             this.addEventListener('UserEvent', (event) => {
                 console.log('UserEvent recevied');
-                console.log(event)
+
+                const document = new Bot.Directive.DPL.Document()
+                return document.getDocumentFromPath('./launchDPL.json')
+                    .then(json => {
+                        const DPLDirective = new Bot.Directive.DPL.RenderDocument()
+                        DPLDirective.setDocument(document)
+                        return {
+                            directives: [DPLDirective],
+                            outputSpeech: '测试两下'
+                        };
+                    })
+
+                // a.mainTemplate.items[1].items[1].items[0].text = '2'
             })
 
             // this.addIntentHandler('personal_income_tax.inquiry', () => {
