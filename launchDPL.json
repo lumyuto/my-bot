@@ -47,8 +47,8 @@
                 "onLoaded": [
                     {
                         "type": "Sequential",
-                        "delayInMilliseconds": 1000,
-                        "repeatCount": 2,
+                        "delayInMilliseconds": 3000,
+                        "repeatCount": 4,
                         "commands": [
                             {
                                 "type": "Animation",
@@ -57,7 +57,7 @@
                                 "from": "100dp",
                                 "to": "300dp",
                                 "easing": "linear",
-                                "duration": 1000,
+                                "duration": 3000,
                                 "repeatCount": "2",
                                 "repeatMode": "reverse",
                                 "onComplete": []
