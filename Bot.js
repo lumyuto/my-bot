@@ -22,10 +22,10 @@ class Bot extends BaseBot {
                         animationCommand.setRepeatCount('1');
 
                         try {
-                            SendEventCommand = new Bot.Directive.DPL.Commands.SendEventCommand()    
+                            SendEventCommand = Bot.Directive.DPL.Commands.SendEventCommand()    
                         } catch (error) {
                             console.log(error)
-                            console.log(Bot.Directive.DPL.Commands)
+                            console.log(Bot.Directive.DPL.Commands.SendEventCommand())
                         }
                         
                         // SendEventCommand.setComponentId("Image01")
