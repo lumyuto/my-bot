@@ -48,19 +48,15 @@
                     {
                             "type": "Animation",
                             "componentId": "Image01",
-                            "attribute": "top",
+                            "attribute": "width",
                             "from": "100dp",
                             "to": "300dp",
                             "easing": "linear",
                             "duration": 1000,
-                            "repeatCount": "1",
-                            "repeatMode": "restart",
-                            "onComplete": [
-                                {
+                            "onComplete": [{
                                 "type": "SendEvent",
                                 "componentId": "Image01"
-                                }
-                            ]
+                            }]
                     }
                 ]
             }
