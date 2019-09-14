@@ -43,6 +43,31 @@
                             }
                         ]
                     }
+                ],
+                "onLoaded": [
+                    {
+                        "type": "DPL.ExecuteCommands",
+                        "token": "52b48d22-59a6-4460-be85-48af704b42a8",
+                        "commands": [
+                            {
+                            "type": "Animation",
+                            "componentId": "Image01",
+                            "attribute": "top",
+                            "from": "100dp",
+                            "to": "300dp",
+                            "easing": "linear",
+                            "duration": 1000,
+                            "repeatCount": "1",
+                            "repeatMode": "restart",
+                            "onComplete": [
+                                {
+                                "type": "SendEvent",
+                                "componentId": "Image01"
+                                }
+                            ]
+                            }
+                        ]
+                    }
                 ]
             }
         ]
