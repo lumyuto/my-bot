@@ -46,10 +46,6 @@
                 ],
                 "onLoaded": [
                     {
-                        "type": "DPL.ExecuteCommands",
-                        "token": "52b48d22-59a6-4460-be85-48af704b42a8",
-                        "commands": [
-                            {
                             "type": "Animation",
                             "componentId": "Image01",
                             "attribute": "top",
@@ -65,8 +61,6 @@
                                 "componentId": "Image01"
                                 }
                             ]
-                            }
-                        ]
                     }
                 ]
             }
