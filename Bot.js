@@ -19,8 +19,8 @@ class Bot extends BaseBot {
                 //             outputSpeech: '测试一下'
                 //         };
                 //     })
-                const document = new Bot.Directive.DPL.Document()
-                document.doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
+                doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
+                const document = new Bot.Directive.DPL.Document(doc)
                 const DPLDirective = new Bot.Directive.DPL.RenderDocument()
                 DPLDirective.setDocument(document)
                 return {
@@ -29,18 +29,18 @@ class Bot extends BaseBot {
                 };
             });
 
-            this.addEventListener('UserEvent', (event) => {
-                console.log('UserEvent recevied');
+            // this.addEventListener('UserEvent', (event) => {
+            //     console.log('UserEvent recevied');
 
-                const document = new Bot.Directive.DPL.Document()
-                document.doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
-                const DPLDirective = new Bot.Directive.DPL.RenderDocument()
-                DPLDirective.setDocument(document)
-                return {
-                    directives: [DPLDirective],
-                    outputSpeech: '测试两下'
-                };
-            })
+            //     const document = new Bot.Directive.DPL.Document()
+            //     document.doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
+            //     const DPLDirective = new Bot.Directive.DPL.RenderDocument()
+            //     DPLDirective.setDocument(document)
+            //     return {
+            //         directives: [DPLDirective],
+            //         outputSpeech: '测试两下'
+            //     };
+            // })
 
             // this.addIntentHandler('personal_income_tax.inquiry', () => {
             //     let loc = this.getSlot('location');
