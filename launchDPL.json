@@ -8,10 +8,9 @@
         "items": [
             {
                 "type": "Container",
-                "margin-left": "10dp",
-                "margin-top": "10dp",
+                "margin-right": "100dp",
                 "height": "100%",
-                "width": "100%",
+                "width": "924dp",
                 "items": [
                     {
                         "type": "List",
@@ -128,6 +127,12 @@
                         ]
                     }
                 ]
+            },
+            {
+                "type": "Container",
+                "height": "100%",
+                "width": "100dp",
+                "background-color": "30333F"
             }
         ]
     }
