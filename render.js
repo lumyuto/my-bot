@@ -89,6 +89,30 @@ const rightItemTemplate = {
             "margin-left": "1dp",
             "src": "${data.src}"
         },
+        {
+            "type": "Image",
+            "width": "20%",
+            "height": "75dp",
+            "border-radius": "5%",
+            "margin-left": "1dp",
+            "src": "${data.src}"
+        },
+        {
+            "type": "Image",
+            "width": "20%",
+            "height": "75dp",
+            "border-radius": "5%",
+            "margin-left": "1dp",
+            "src": "${data.src}"
+        },
+        {
+            "type": "Image",
+            "width": "20%",
+            "height": "75dp",
+            "border-radius": "5%",
+            "margin-left": "1dp",
+            "src": "${data.src}"
+        },
         // {
         //     "type": "Container",
         //     "height": "75dp",
@@ -123,7 +147,7 @@ const left = ({data}) => ({
             "width": "100%",
             "direction": "vertical",
             "data": data,
-            "items": [rightItemTemplate, rightItemTemplate, rightItemTemplate, rightItemTemplate]
+            "items": [rightItemTemplate]
         }
     ]
 })
