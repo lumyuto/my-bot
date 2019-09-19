@@ -8,33 +8,37 @@ class Bot extends BaseBot {
             super(postData);
 
             this.addLaunchHandler(() => {
+                // const document = new Bot.Directive.DPL.Document()
+                // return document.getDocumentFromPath('./launchDPL.json')
+                //     .then(json => {
+                //         const DPLDirective = new Bot.Directive.DPL.RenderDocument()
+                //         DPLDirective.setDocument(document)
+                //         return {
+                //             directives: [DPLDirective],
+                //             outputSpeech: '测试一下'
+                //         };
+                //     })
                 const document = new Bot.Directive.DPL.Document()
-                return document.getDocumentFromPath('./launchDPL.json')
-                    .then(json => {
-                        const DPLDirective = new Bot.Directive.DPL.RenderDocument()
-                        DPLDirective.setDocument(document)
-                        return {
-                            directives: [DPLDirective],
-                            outputSpeech: '测试一下'
-                        };
-                    })
+                document.doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
+                const DPLDirective = new Bot.Directive.DPL.RenderDocument()
+                DPLDirective.setDocument(document)
+                return {
+                    directives: [DPLDirective],
+                    outputSpeech: '测试一下'
+                };
             });
 
             this.addEventListener('UserEvent', (event) => {
                 console.log('UserEvent recevied');
 
                 const document = new Bot.Directive.DPL.Document()
-                return document.getDocumentFromPath('./launchDPL.json')
-                    .then(json => {
-                        const DPLDirective = new Bot.Directive.DPL.RenderDocument()
-                        DPLDirective.setDocument(document)
-                        return {
-                            directives: [DPLDirective],
-                            outputSpeech: '测试两下'
-                        };
-                    })
-
-                // a.mainTemplate.items[1].items[1].items[0].text = '2'
+                document.doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
+                const DPLDirective = new Bot.Directive.DPL.RenderDocument()
+                DPLDirective.setDocument(document)
+                return {
+                    directives: [DPLDirective],
+                    outputSpeech: '测试两下'
+                };
             })
 
             // this.addIntentHandler('personal_income_tax.inquiry', () => {
