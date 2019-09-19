@@ -15,7 +15,7 @@
                     {
                         "type": "Container",
                         "height": "100%",
-                        "width": "959dp",
+                        "width": "959px",
                         "items": [
                             {
                                 "type": "List",
@@ -107,12 +107,6 @@
                                                         "text": "${data.body2}"
                                                     }
                                                 ]
-                                            },
-                                            {
-                                                "type": "Text",
-                                                "margin-left": "50dp",
-                                                "font-size": "40dp",
-                                                "text": "${data.tail}"
                                             }
                                         ]
                                     }
@@ -136,7 +130,7 @@
                     {
                         "type": "Container",
                         "height": "100%",
-                        "width": "65dp",
+                        "width": "65px",
                         "background-color": "#30333F",
                         "items": [
                             {
