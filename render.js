@@ -71,7 +71,7 @@ const data = [
 const rightItemTemplate = {
     "type": "Container",
     "height": "100dp",
-    "width": "173px",
+    "width": "100%",
     "flex-direction": "row",
     "items": [
         // {
