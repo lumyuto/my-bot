@@ -1,4 +1,5 @@
 const BaseBot = require('bot-sdk');
+const fs = require('fs');
 
 class Bot extends BaseBot {
     /**
