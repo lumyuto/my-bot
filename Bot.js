@@ -19,7 +19,7 @@ class Bot extends BaseBot {
                 //             outputSpeech: '测试一下'
                 //         };
                 //     })
-                doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
+                const doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
                 const document = new Bot.Directive.DPL.Document(doc)
                 const DPLDirective = new Bot.Directive.DPL.RenderDocument()
                 DPLDirective.setDocument(document)
