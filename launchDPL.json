@@ -132,7 +132,7 @@
                 "type": "Container",
                 "height": "100%",
                 "width": "100dp",
-                "background-color": "#30333F"
+                "background-color": "rgb(255, 0, 0)"
             }
         ]
     }
