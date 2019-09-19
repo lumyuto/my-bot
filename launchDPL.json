@@ -15,7 +15,7 @@
                     {
                         "type": "Container",
                         "height": "100%",
-                        "width": "924dp",
+                        "width": "959dp",
                         "items": [
                             {
                                 "type": "List",
@@ -136,8 +136,8 @@
                     {
                         "type": "Container",
                         "height": "100%",
-                        "width": "100dp",
-                        "background-color": "rgb(255, 0, 0)",
+                        "width": "65dp",
+                        "background-color": "#30333F",
                         "items": [
                             {
                                 "type": "Image",
@@ -147,7 +147,7 @@
                                 "left": "0dp",
                                 "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_18-57-352.jpg",
                                 "height": "100%",
-                                "width": "100dp"
+                                "width": "65dp"
                             }
                         ]
                     }
