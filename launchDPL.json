@@ -114,6 +114,19 @@
                             }
                         ]
                     }
+                ],
+                "onLoaded": [
+                    {
+                        "type": "Sequential",
+                        "delayInMilliseconds": 3000,
+                        "repeatCount": 1,
+                        "commands": [
+                            {
+                                "type": "SendEvent",
+                                "componentId": "Image01"
+                            }
+                        ]
+                    }
                 ]
             }
         ]
