@@ -18,11 +18,14 @@ app.post('/', (req, res) => {
 
     req.on('end', () => {
         let b = new Bot(JSON.parse(req.rawBody));
+
+        console.log('request: \n' + req.rawBody)
         // 开启签名认证
         // 本地运行可以先注释
         // b.initCertificate(req.headers, req.rawBody).enableVerifyRequestSign();
 
         b.run().then(result => {
+            console.log('response: \n' + req.rawBody)
             res.send(result);
         });
     });

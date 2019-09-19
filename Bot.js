@@ -1,5 +1,5 @@
 const BaseBot = require('bot-sdk');
-const fs = require('fs');
+const render = require('./render')
 
 class Bot extends BaseBot {
     /**
@@ -9,78 +9,44 @@ class Bot extends BaseBot {
             super(postData);
 
             this.addLaunchHandler(() => {
-                // const document = new Bot.Directive.DPL.Document()
-                // return document.getDocumentFromPath('./launchDPL.json')
-                //     .then(json => {
-                //         const DPLDirective = new Bot.Directive.DPL.RenderDocument()
-                //         DPLDirective.setDocument(document)
-                //         return {
-                //             directives: [DPLDirective],
-                //             outputSpeech: '测试一下'
-                //         };
-                //     })
-                const doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
-                const document = new Bot.Directive.DPL.Document(doc)
-                const DPLDirective = new Bot.Directive.DPL.RenderDocument()
-                DPLDirective.setDocument(document)
-                return {
-                    directives: [DPLDirective],
-                    outputSpeech: '测试一下'
-                };
+                return render()
             });
 
-            // this.addEventListener('UserEvent', (event) => {
-            //     console.log('UserEvent recevied');
+            this.addEventListener('UserEvent', (event) => {
+                console.log('UserEvent recevied');
 
-            //     const document = new Bot.Directive.DPL.Document()
-            //     document.doc = JSON.parse(fs.readFileSync('./launchDPL.json').toString())
-            //     const DPLDirective = new Bot.Directive.DPL.RenderDocument()
-            //     DPLDirective.setDocument(document)
-            //     return {
-            //         directives: [DPLDirective],
-            //         outputSpeech: '测试两下'
-            //     };
-            // })
+                return render()
+            })
 
-            // this.addIntentHandler('personal_income_tax.inquiry', () => {
-            //     let loc = this.getSlot('location');
-            //     let monthlySalary = this.getSlot('monthlysalary');
+            /**
+                this.addIntentHandler('personal_income_tax.inquiry', () => {
+                    let loc = this.getSlot('location');
+                    let monthlySalary = this.getSlot('monthlysalary');
 
-            //     if (!monthlySalary) {
-            //         this.nlu.ask('monthlySalary');
-            //         //  let card = new Bot.Card.TextCard('你工资多少呢');
+                    if (!monthlySalary) {
+                        this.nlu.ask('monthlySalary');
+                        //  let card = new Bot.Card.TextCard('你工资多少呢');
 
-            //         //  如果有异步操作，可以返回一个promise
-            //         return new Promise(function (resolve, reject) {
-            //             resolve({
-            //                 directives: [this.getTemplate1('你工资多少呢')],
-            //                 outputSpeech: '你工资多少呢'
-            //             });
-            //         });
-            //     }
+                        //  如果有异步操作，可以返回一个promise
+                        return new Promise(function (resolve, reject) {
+                            resolve({
+                                directives: [this.getTemplate1('你工资多少呢')],
+                                outputSpeech: '你工资多少呢'
+                            });
+                        });
+                    }
 
-            //     if (!loc) {
-            //         //  let card = new Bot.Card.TextCard('你在哪呢');
-            //         this.nlu.ask('location');
-            //         return {
-            //             directives: [this.getTemplate1('你在哪呢')],
-            //             outputSpeech: '你在哪呢'
-            //         };
+                    if (!loc) {
+                        //  let card = new Bot.Card.TextCard('你在哪呢');
+                        this.nlu.ask('location');
+                        return {
+                            directives: [this.getTemplate1('你在哪呢')],
+                            outputSpeech: '你在哪呢'
+                        };
 
-            //     }
-            // });
-    }
-    /**
-     *  获取文本展现模板
-     *
-     *  @param {string} text 歌曲详情
-     *  @return {RenderTemplate} 渲染模版
-     */
-    getTemplate1(text) {
-        let bodyTemplate = new BaseBot.Directive.Display.Template.BodyTemplate1();
-        bodyTemplate.setPlainTextContent(text);
-        let renderTemplate = new BaseBot.Directive.Display.RenderTemplate(bodyTemplate);
-        return renderTemplate;
+                    }
+                });
+            */
     }
 }
 
