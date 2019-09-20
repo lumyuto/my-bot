@@ -70,9 +70,9 @@ const data = [
 
 const itemTemplate = {
     "type": "Container",
-    "height": "200dp",
-    "width": "256dp",
-    // "margin-right": "11px",
+    "height": "100dp",
+    "width": "173dp",
+    "margin-right": "11dp",
     "background-color": "#ffffff",
     "items": [{
             "type": "Image",
@@ -99,12 +99,14 @@ const rightItemTemplate = {
 const left = ({data}) => ({
     "type": "Container",
     "height": "100%",
-    "width": "100%",
+    "width": "958dp",
     "items": [
         {
             "type": "List",
             "height": "100%",
             "width": "100%",
+            "margin-left": '23dp',
+            "margin-right": '23dp',
             "direction": "vertical",
             "data": data,
             "items": [rightItemTemplate]
@@ -131,7 +133,7 @@ const cycleRequest = {
 const right = {
     "type": "Container",
     "height": "100%",
-    "width": "0px",
+    "width": "66dp",
     "background-color": "#30333F",
     "items": [
         {
