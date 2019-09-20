@@ -130,7 +130,7 @@ const cycleRequest = {
     ]
 }
 
-const btnTemplate = {
+const btnTemplate = id => ({
     "type": "Container",
     "height": "88dp",
     "width": "66dp",
@@ -143,8 +143,13 @@ const btnTemplate = {
         "top": "27dp",
         "left": "16dp",
         "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-18-26.png"
+    }],
+    "onClick": [{
+        "type": "SendEvent",
+        "componentId": id
     }]
-}
+})
+
 const right = {
     "type": "Container",
     "height": "100%",
@@ -153,7 +158,7 @@ const right = {
     "right": "0dp",
     "top": "0dp",
     "background-color": "#30333F",
-    "items": [btnTemplate, btnTemplate, btnTemplate, btnTemplate]
+    "items": [btnTemplate("radar"), btnTemplate("news"), btnTemplate("signal"), btnTemplate("live")]
 }
 
 module.exports = function render() {
