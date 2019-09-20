@@ -135,6 +135,9 @@ const right = {
     "type": "Container",
     "height": "100%",
     "width": "66dp",
+    "position": "absolute",
+    "right": "0dp",
+    "top": "0dp",
     "background-color": "#30333F",
     "items": [
         {
