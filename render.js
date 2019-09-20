@@ -93,7 +93,7 @@ const rightItemTemplate = {
     "height": "100dp",
     "width": "100%",
     "flex-direction": "row",
-    "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate]
+    "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate, itemTemplate]
 }
 
 const left = ({data}) => ({
@@ -131,7 +131,7 @@ const cycleRequest = {
 const right = {
     "type": "Container",
     "height": "100%",
-    "width": "65px",
+    "width": "0px",
     "background-color": "#30333F",
     "items": [
         {
