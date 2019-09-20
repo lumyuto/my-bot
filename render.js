@@ -72,7 +72,7 @@ const itemTemplate = {
     "type": "Container",
     "height": "100dp",
     "width": "100%",
-    "flex-direction": "row",
+    "flex-direction": "column",
     "items": [{
             "type": "Text",
             "font-size": "30dp",
