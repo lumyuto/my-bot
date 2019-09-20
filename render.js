@@ -72,7 +72,7 @@ const itemTemplate = {
     "type": "Container",
     "height": "100dp",
     "width": "160dp",
-    "margin-right": "10dp",
+    "margin-right": "12dp",
     "background-color": "#ffffff",
     "items": [{
             "type": "Image",
@@ -101,7 +101,7 @@ const left = ({data}) => ({
     "type": "Container",
     "height": "100%",
     "width": "933dp",
-    "padding-left": '25dp',
+    "padding-left": '20dp',
     "padding-right": '15dp',
     "items": [
         {
