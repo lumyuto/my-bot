@@ -1,0 +1,99 @@
+POST  http://127.0.0.1:8016
+Content-Type: application/json
+cache-control: no-cache
+Postman-Token: cb04cfb3-a97d-49d3-a5ad-2e7a12a1813b
+
+{
+    "version": "v2.0",
+    "session": {
+        "new": true,
+        "sessionId": "fd69a65b-5874-4a4f-9d3c-556ec3a5ddd7"
+    },
+    "context": {
+        "System": {
+            "user": {
+                "userId": "1698155091",
+                "userInfo": {
+                    "account": {},
+                    "appLocation": {
+                        "geo": {
+                            "bd09ll": {
+                                "longitude": -1.0,
+                                "latitude": -1.0
+                            },
+                            "wgs84": {
+                                "longitude": -1.0,
+                                "latitude": -1.0
+                            },
+                            "bd09mc": {
+                                "longitude": -1.0,
+                                "latitude": -1.0
+                            }
+                        },
+                        "city": "",
+                        "district": "",
+                        "countryCode": "0",
+                        "cityCode": "0",
+                        "province": "",
+                        "street": "",
+                        "sematicDescription": ""
+                    }
+                },
+                "operationData": {
+                    "groupIdList": ["2", "261"]
+                }
+            },
+            "application": {
+                "applicationId": "2428e786-8d60-d103-925a-55f1b4739400"
+            },
+            "device": {
+                "deviceId": "cf1ff47249032f9e806dfec919283be5",
+                "supportedInterfaces": {
+                    "VoiceInput": {},
+                    "VoiceOutput": {},
+                    "AudioPlayer": {},
+                    "Display": {},
+                    "VideoPlayer": {
+                        "preferedBitrate": "",
+                        "preferedWidth": 0,
+                        "preferedHeight": 0
+                    },
+                    "DPL": {
+                        "version": "1.0.1"
+                    },
+                    "BotAppSdk": {
+                        "h5App": true,
+                        "aiApp": false,
+                        "cloudApp": false,
+                        "preInstalledAppIds": ["debff2ea-a880-b990-9a49-bc649c782d61", "bb52e6a2-3b6c-99f2-65a6-04361e1e7a37", "71126f4b-25ef-55d4-2b93-912c5a25220b"]
+                    }
+                },
+                "baiduMobileId": "369AE7E78EDA749434B8863D8BC59370|0",
+                "TVControl": {
+                    "controlType": "DCSControl",
+                    "controlStatus": 0
+                },
+                "originalDeviceSerialNumber": "",
+                "UserBindingTimestamp": 1567741930
+            },
+            "apiAccessToken": "zMyvSRO9kdgAHWVIJcTO4EP4WPSWESP3XqWjeFJS8ZSDDpbt9PNxmmSw1tp9IycyquC607Xbinr72QwxfTISJhKzlRVLOqJqA2yj4VjRFetUPokbvS+TsZrZM9da5Vn4qID6QIh7GcPL/eYiPrKNpFGXxqPS/I7YzTvmWmmt0YmUTo+9CH7AVXiRKFjari8k9/PdnvNBjIJrR00DSumyzumBNK3efdHiKTGZN3s7tN14CRXZTNevHOWf1Y88VItqEakDYjn4oaXvRwuSoeJ0sYTRP4p+DmgL1joRgW2nQPMwq3ciSONKEMxiuQbbTJEjnHMpOTtjZJHafGTw7hzvbJwKyDwGOGCmCsx/9VXfjreN1Z0pnePoLUHUbS/anpY+",
+            "apiEndPoint": "https://xiaodu.baidu.com",
+            "avaliableApplicationIds": ["audio_music", "sysprofile_service", "doudi_server", "aries_general", "ai.dueros.bot.ui_voice_interaction", "ai.dueros.bot.homecard", "speaker_hardware", "audio_unicast", "audio_live", "audio_news", "duer_weather", "ai.dueros.bot.alarm", "ai.dueros.bot.timer", "ai.dueros.bot.video_on_demand", "ai.dueros.bot.vocal_joke", "ai.dueros.bot.smarthome", "ai.dueros.bot.tv_control", "ai.dueros.bot.short_video", "ai.dueros.bot.content_square", "ai.dueros.bot.puzzle", "d4106ab2-4374-816e-322a-341fcc625e4b", "07079c84-c50e-5668-1af7-8278472df6da", "87b6283d-3fac-8ab7-7be5-32fc1d85e605", "ai.dueros.bot.tv_live", "ai.dueros.bot.gimi_custom_command", "ai.dueros.bot.launchpad", "0354818e-6eb5-578b-c251-25334a6e2a81", "ai.dueros.bot.faq", "ai.dueros.bot.oss", "app_voice_control", "audio_classic", "fed5e9a3-32e0-a87c-9571-9c7d296b919d", "ai.dueros.bot.audio_museum", "ai.dueros.bot.wordschain", "0b082db2-fc64-6396-5744-1ffd84e83a32", "ai.dueros.bot.homecard_v2", "483c3ee4-0e37-e05a-0d95-efe1dc96dc44", "b28e9809-e4c3-a470-d58d-3b24f81b6091", "b8789394-8b2a-765d-b4ed-495b72986e39", "ai.dueros.ext.rus", "6402fc3a-7825-3147-b52e-c25911b6d03c", "738a3029-0963-0ef5-6274-a6a31c9df28a", "ext_timer", "0a7d4511-26d3-78ab-9652-2781dd6a073f", "cc33b657-eacb-2b9e-4f7c-e2fe002b1327", "user_profile", "chitchat", "baidu_search"]
+        },
+        "AudioPlayer": {
+            "token": "",
+            "offsetInMilliSeconds": 0,
+            "playActivity": "IDLE",
+            "applicationId": ""
+        },
+        "Screen": {
+            "token": "cms/advertisement/193836"
+        }
+    },
+    "request": {
+        "type": "LaunchRequest",
+        "requestId": "824479b4-68bc-404d-8099-9eb7b6b08b73_DCSbfh9kwm1bt_3#1_0",
+        "timestamp": "1568926675",
+        "dialogRequestId": "61fc7871-1ed8-47d4-94a6-9621c89c5328"
+    }
+}
