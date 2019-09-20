@@ -99,7 +99,7 @@ const rightItemTemplate = {
 const left = ({data}) => ({
     "type": "Container",
     "height": "100%",
-    "width": "959px",
+    "width": "100%",
     "items": [
         {
             "type": "List",
