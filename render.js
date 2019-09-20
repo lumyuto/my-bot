@@ -71,9 +71,9 @@ const data = [
 const itemTemplate = {
     "type": "Container",
     "height": "100dp",
-    "width": "173px",
-    "margin-right": "11px",
-    "flex-direction": "row",
+    "width": "200px",
+    // "margin-right": "11px",
+    "background-color": "#ffffff",
     "items": [{
             "type": "Image",
             "width": "100%",
