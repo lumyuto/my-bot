@@ -71,8 +71,8 @@ const data = [
 const itemTemplate = {
     "type": "Container",
     "height": "100dp",
-    "width": "173dp",
-    "margin-right": "11dp",
+    "width": "200dp",
+    // "margin-right": "11dp",
     "background-color": "#ffffff",
     "items": [{
             "type": "Image",
@@ -99,14 +99,14 @@ const rightItemTemplate = {
 const left = ({data}) => ({
     "type": "Container",
     "height": "100%",
-    "width": "958dp",
+    "width": "1000dp",
     "items": [
         {
             "type": "List",
             "height": "100%",
             "width": "100%",
-            "margin-left": '23dp',
-            "margin-right": '23dp',
+            // "margin-left": '23dp',
+            // "margin-right": '23dp',
             "direction": "vertical",
             "data": data,
             "items": [rightItemTemplate]
@@ -133,7 +133,7 @@ const cycleRequest = {
 const right = {
     "type": "Container",
     "height": "100%",
-    "width": "66dp",
+    "width": "0dp",
     "background-color": "#30333F",
     "items": [
         {
@@ -143,7 +143,7 @@ const right = {
             "left": "0dp",
             "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_18-57-352.jpg",
             "height": "100%",
-            "width": "66dp"
+            "width": "0dp"
         }
     ]
 }
