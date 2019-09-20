@@ -71,19 +71,20 @@ const data = [
 const itemTemplate = {
     "type": "Container",
     "height": "100dp",
-    "width": "25%",
+    "width": "173px",
+    "margin-right": "11px",
     "flex-direction": "row",
     "items": [{
-            "type": "Text",
-            "font-size": "30dp",
-            "text": "${data.body1}"
-        }, {
             "type": "Image",
             "width": "100%",
             "height": "100%",
             "position": "absolute",
             "src": "${data.src}"
-        },
+        }, {
+            "type": "Text",
+            "font-size": "39px",
+            "text": "${data.body1}"
+        }, 
     ]
 }
 
