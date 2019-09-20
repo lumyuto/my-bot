@@ -71,7 +71,7 @@ const data = [
 const itemTemplate = {
     "type": "Container",
     "height": "100dp",
-    "width": "200px",
+    "width": "256px",
     // "margin-right": "11px",
     "background-color": "#ffffff",
     "items": [{
@@ -93,7 +93,7 @@ const rightItemTemplate = {
     "height": "100dp",
     "width": "100%",
     "flex-direction": "row",
-    "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate, itemTemplate]
+    "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate]
 }
 
 const left = ({data}) => ({
