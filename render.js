@@ -102,7 +102,6 @@ const left = ({data}) => ({
     "height": "100%",
     "width": "933dp",
     "padding-left": '20dp',
-    "padding-right": '15dp',
     "items": [
         {
             "type": "List",
@@ -131,6 +130,21 @@ const cycleRequest = {
     ]
 }
 
+const btnTemplate = {
+    "type": "Container",
+    "height": "88dp",
+    "width": "66dp",
+    "background-color": "#353A47",
+    "items": [{
+        "type": "Image",
+        "width": "34dp",
+        "height": "34dp",
+        "position": "absolute",
+        "top": "27dp",
+        "left": "16dp",
+        "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-18-26.png"
+    }]
+}
 const right = {
     "type": "Container",
     "height": "100%",
@@ -139,17 +153,7 @@ const right = {
     "right": "0dp",
     "top": "0dp",
     "background-color": "#30333F",
-    "items": [
-        {
-            "type": "Image",
-            "position": "absolute",
-            "top": "0dp",
-            "left": "0dp",
-            "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_18-57-352.jpg",
-            "height": "100%",
-            "width": "66dp"
-        }
-    ]
+    "items": [btnTemplate, btnTemplate, btnTemplate, btnTemplate]
 }
 
 module.exports = function render() {
