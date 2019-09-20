@@ -13,7 +13,7 @@ class Bot extends BaseBot {
             });
 
             this.addEventListener('UserEvent', (event) => {
-                console.log('UserEvent recevied');
+                console.log('\n\nUserEvent recevied:');
 
                 return render()
             })

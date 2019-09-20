@@ -189,10 +189,12 @@ const right = {
 
 module.exports = function render() {
     const doc = template(
-        [{...body([
-            left({data}), 
-            right
-        ]), ...cycleRequest}]
+        [
+            {
+                ...cycleRequest,
+                ...body([left({data}), right]),
+            }
+        ]
     )
     const document = new Document(doc)
     const DPLDirective = new RenderDocument()
