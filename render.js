@@ -92,6 +92,7 @@ const rightItemTemplate = {
     "type": "Container",
     "height": "100dp",
     "width": "100%",
+    "margin-bottom": "28dp",
     "flex-direction": "row",
     "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate, itemTemplate]
 }
