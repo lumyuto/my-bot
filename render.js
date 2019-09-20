@@ -68,72 +68,31 @@ const data = [
     }
 ]
 
+const itemTemplate = {
+    "type": "Container",
+    "height": "100dp",
+    "width": "100%",
+    "flex-direction": "row",
+    "items": [{
+            "type": "Text",
+            "font-size": "30dp",
+            "text": "${data.body1}"
+        }, {
+            "type": "Image",
+            "width": "100%",
+            "height": "100%",
+            "position": "absolute",
+            "src": "${data.src}"
+        },
+    ]
+}
+
 const rightItemTemplate = {
     "type": "Container",
     "height": "100dp",
     "width": "100%",
     "flex-direction": "row",
-    "items": [
-        // {
-        //     "type": "Text",
-        //     "font-size": "40dp",
-        //     "margin-left": "40dp",
-        //     "margin-top": "7dp",
-        //     "text": "${data.leftText}"
-        // },
-        {
-            "type": "Image",
-            "width": "20%",
-            "height": "75dp",
-            "border-radius": "5%",
-            "margin-left": "1dp",
-            "src": "${data.src}"
-        },
-        {
-            "type": "Image",
-            "width": "20%",
-            "height": "75dp",
-            "border-radius": "5%",
-            "margin-left": "1dp",
-            "src": "${data.src}"
-        },
-        {
-            "type": "Image",
-            "width": "20%",
-            "height": "75dp",
-            "border-radius": "5%",
-            "margin-left": "1dp",
-            "src": "${data.src}"
-        },
-        {
-            "type": "Image",
-            "width": "20%",
-            "height": "75dp",
-            "border-radius": "5%",
-            "margin-left": "1dp",
-            "src": "${data.src}"
-        },
-        // {
-        //     "type": "Container",
-        //     "height": "75dp",
-        //     "width": "45%",
-        //     "flex-direction": "column",
-        //     "margin-left": "20dp",
-        //     "items": [
-        //         {
-        //             "type": "Text",
-        //             "font-size": "30dp",
-        //             "text": "${data.body1}"
-        //         },
-        //         {
-        //             "type": "Text",
-        //             "font-size": "20dp",
-        //             "margin-top": "8dp",
-        //             "text": "${data.body2}"
-        //         }
-        //     ]
-        // }
-    ]
+    "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate]
 }
 
 const left = ({data}) => ({
@@ -191,8 +150,8 @@ module.exports = function render() {
     const doc = template(
         [
             {
-                ...cycleRequest,
                 ...body([left({data}), right]),
+                ...cycleRequest,
             }
         ]
     )
