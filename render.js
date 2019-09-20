@@ -100,13 +100,13 @@ const left = ({data}) => ({
     "type": "Container",
     "height": "100%",
     "width": "937dp",
+    "padding-left": '25dp',
+    "padding-right": '18dp',
     "items": [
         {
             "type": "List",
             "height": "100%",
             "width": "100%",
-            "margin-left": '25dp',
-            "margin-right": '18dp',
             "direction": "vertical",
             "data": data,
             "items": [rightItemTemplate]
