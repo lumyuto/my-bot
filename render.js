@@ -93,7 +93,7 @@ const rightItemTemplate = {
     "height": "100dp",
     "width": "100%",
     "flex-direction": "row",
-    "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate]
+    "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate, itemTemplate]
 }
 
 const left = ({data}) => ({
@@ -138,13 +138,12 @@ const right = {
     "items": [
         {
             "type": "Image",
-            "componentId": "Image01",
             "position": "absolute",
             "top": "0dp",
             "left": "0dp",
             "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_18-57-352.jpg",
             "height": "100%",
-            "width": "65dp"
+            "width": "66dp"
         }
     ]
 }
