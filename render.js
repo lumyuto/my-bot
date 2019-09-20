@@ -71,8 +71,8 @@ const data = [
 const itemTemplate = {
     "type": "Container",
     "height": "100dp",
-    "width": "100%",
-    "flex-direction": "column",
+    "width": "25%",
+    "flex-direction": "row",
     "items": [{
             "type": "Text",
             "font-size": "30dp",
