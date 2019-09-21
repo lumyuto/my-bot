@@ -149,21 +149,19 @@ function renderSingnal() {
 }
 
 function renderLive() {
-    return new Promise((resolve, reject) => {
-        const left = live_tpl
-        const doc = template(
-            [body([left, right(4)])]
-        )
+    const left = live_tpl
+    const doc = template(
+        [body([left, right(4)])]
+    )
 
-        console.log('\n\ndoc:\n'+ JSON.stringify(doc))
-        const document = new Document(doc)
-        const DPLDirective = new RenderDocument()
-        DPLDirective.setDocument(document)
+    console.log('\n\ndoc:\n'+ JSON.stringify(doc))
+    const document = new Document(doc)
+    const DPLDirective = new RenderDocument()
+    DPLDirective.setDocument(document)
 
-        return {
-            directives: [DPLDirective],
-        }
-    })
+    return {
+        directives: [DPLDirective],
+    }
 }
 
 module.exports = {
