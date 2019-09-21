@@ -13,7 +13,7 @@ const left = {
     "padding-left": '60dp',
     "padding-top": '60dp',
     "background-color": '#353A47',
-    "flex-direction": "row",
+    "flex-direction": "column",
     "items": [
         {
             "type": "Image",
