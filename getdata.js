@@ -61,7 +61,7 @@ function getSingalData() {
                 follower_count: _.follower_count,
             }))
 
-            console.log(data.map(_=>_.created_at))
+            console.log(results)
 
             resolve(data);
         })
