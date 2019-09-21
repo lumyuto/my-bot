@@ -39,12 +39,12 @@ const pTemplate = {
         "margin-right": "10dp",
     }, {
         "type": "Text",
-        "font-size": "19px",
-        // "text": "${data.p_desc}",
+        "font-size": "14px",
+        "text": "${data.p_desc}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
-        "font-size": "19px",
+        "font-size": "14px",
         "text": "${data.total_gain}",
         "margin-right": "10dp",
     }]
