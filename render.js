@@ -118,6 +118,7 @@ const left = ({data}) => ({
     "height": "100%",
     "width": "933dp",
     "padding-left": '20dp',
+    "padding-top": '60dp',
     "items": [
         {
             "type": "List",
