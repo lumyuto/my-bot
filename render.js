@@ -52,7 +52,7 @@ const itemTemplate = index => ({
         }, {
             "type": "Text",
             "font-size": "19px",
-            "color": "${data["+index+"].pos ? '#F2564E' : '#17A56B'}",
+            "color": "${data["+index+"].pos ? #F2564E : #17A56B}",
             "text": "${data["+index+"].value}",
             "text-align": "right",
             "position": "relative",
