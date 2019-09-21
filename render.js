@@ -176,22 +176,28 @@ const right = {
         btnTemplate("MENU.Live", false, "live.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2F71d9b2f25a9f4155decb14d6f88f15a07dea5b91b12b23d8829f0e6af998f146")]
 }
 
+import getdata from './getdata.js'
+
 module.exports = function render() {
     return new Promise((resolve, reject) => {
-        const doc = template(
-            [
-                {
-                    ...body([left({data}), right]),
-                    ...cycleRequest,
-                }
-            ]
-        )
-        const document = new Document(doc)
-        const DPLDirective = new RenderDocument()
-        DPLDirective.setDocument(document)
-        resolve({
-            directives: [DPLDirective],
-            // outputSpeech: '测试一下'
+        getdata().then(data => {
+            const doc = template(
+                [
+                    {
+                        ...body([left({data}), right]),
+                        ...cycleRequest,
+                    }
+                ]
+            )
+            const document = new Document(doc)
+            const DPLDirective = new RenderDocument()
+            DPLDirective.setDocument(document)
+    
+    
+            resolve({
+                directives: [DPLDirective],
+                // outputSpeech: '测试一下'
+            })
         })
     })
 }
