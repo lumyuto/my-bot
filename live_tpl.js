@@ -12,26 +12,25 @@ const left = {
     "width": "933dp",
     "padding-left": '60dp',
     "padding-top": '60dp',
-    "background-color": '#f00',
     "items": [
         {
-                "type": "Image",
-                "width": "285dp",
-                "height": "177dp",
-                "scale-type": "fitXY",
-                "src": img1
-            //     "type": "Image",
-            //     "width": "285dp",
-            //     "height": "177dp",
-            //     "scale-type": "fitXY",
-            //     "src": img2
-            // }, {
-            //     "type": "Image",
-            //     "width": "285dp",
-            //     "height": "177dp",
-            //     "scale-type": "fitXY",
-            //     "src": img3
-            // }]
+            "type": "Image",
+            "width": "285dp",
+            "height": "177dp",
+            "scale-type": "fitXY",
+            "src": img1
+        },{
+            "type": "Image",
+            "width": "285dp",
+            "height": "177dp",
+            "scale-type": "fitXY",
+            "src": img2
+        }, {
+            "type": "Image",
+            "width": "285dp",
+            "height": "177dp",
+            "scale-type": "fitXY",
+            "src": img3
         }
     ],
     ...refreshTpl(25, 'Live')
