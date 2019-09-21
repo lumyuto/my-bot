@@ -123,7 +123,7 @@ function renderNews() {
 
 function renderSingnal() {
     return new Promise((resolve, reject) => {
-        getSingalData().then(data => {
+        getNewsData().then(data => {
             data = JSON.parse(JSON.stringify(data))
 
             console.log('\n\ndata:\n' + JSON.stringify(data))
