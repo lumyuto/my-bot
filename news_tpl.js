@@ -47,7 +47,7 @@ const left = ({data}) => ({
             // "items": [rowItemTemplate]
         }
     ],
-    // ...refreshTpl(30)
+    ...refreshTpl(30)
 })
 
 module.exports = {
