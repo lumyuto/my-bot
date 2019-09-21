@@ -9,7 +9,7 @@ class Bot extends BaseBot {
             super(postData);
 
             this.addLaunchHandler(() => {
-                return renderSingnal()
+                return renderNews()
             });
 
             this.addEventListener('UserEvent', (event) => {
@@ -18,7 +18,7 @@ class Bot extends BaseBot {
                 event.payload.componentId == 'REFRESH'
                 event.payload.componentId == 'MENU.Signal'
 
-                return renderSingnal()
+                return renderNews()
             })
 
             /**
