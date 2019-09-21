@@ -43,13 +43,13 @@ const pTemplate = {
         "type": "Text",
         "font-size": "14px",
         "vertical-align": "bottom",
-        "text": "总收益：${data.total_gain}",
+        "text": "总收益：${data.total_gain}%",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "14px",
         "vertical-align": "bottom",
-        "text": "年收益：${data.annualized_gain_rate}",
+        "text": "年收益：${data.annualized_gain_rate}%",
         "margin-right": "10dp",
     }]
 }
@@ -92,7 +92,7 @@ const left = ({data}) => ({
             "items": [rowItemTemplate]
         }
     ],
-    ...refreshTpl(25)
+    ...refreshTpl(25, 'Singal')
 })
 
 module.exports = {

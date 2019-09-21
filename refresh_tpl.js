@@ -1,6 +1,6 @@
 
 
-const cycleRequest = (delay=10) => ({
+const cycleRequest = (delay=10, name='') => ({
     "onLoaded": [
         {
             "type": "Sequential",
@@ -9,7 +9,7 @@ const cycleRequest = (delay=10) => ({
             "commands": [
                 {
                     "type": "SendEvent",
-                    "componentId": "REFRESH"
+                    "componentId": "REFRESH." + name
                 }
             ]
         }
