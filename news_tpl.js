@@ -51,5 +51,5 @@ const left = ({data}) => ({
 })
 
 module.exports = {
-    radar_tpl: left
+    news_tpl: left
 }
