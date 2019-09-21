@@ -36,5 +36,7 @@ def checkTarget(iD, name):
     
 tickers = pd.read_sql_query('select id, ticker from target where source="binance"', conn)
 ret_ = tickers.apply(lambda s: checkTarget(s['id'], s['ticker']), axis=1)
+print(ret_)
 ret = pd.DataFrame(list(ret_))
+print(ret)
 ret.to_sql('radar', conn, if_exists='replace')
