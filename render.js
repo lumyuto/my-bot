@@ -91,14 +91,15 @@ const itemTemplate = {
             "type": "Text",
             "font-size": "19px",
             "text": "VOL",
-            "margin-top": "31dp",
+            "margin-top": "24dp",
         }, {
             "type": "Text",
             "font-size": "19px",
             "color": "#F2564E",
             "text": "+4.08%",
+            "text-align": "right",
             "margin-left": "10dp",
-            "margin-top": "31dp",
+            "margin-top": "24dp",
         }, 
     ]
 }
