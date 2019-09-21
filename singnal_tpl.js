@@ -43,7 +43,7 @@ const pTemplate = {
     }, {
         "type": "Text",
         "font-size": "14px",
-        "text": "年化收益：${data.annualized_gain_rate}",
+        "text": "年收益：${data.annualized_gain_rate}",
         "margin-right": "10dp",
     }]
 }
