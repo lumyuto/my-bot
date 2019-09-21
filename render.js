@@ -23,29 +23,29 @@ const body = items => ({
     "items": items
 })
 
-const pic = "http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/a.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T06%3A37%3A51Z%2F-1%2F%2Fcece5123ed6c008c445b0ab372ea207a61f3a8e37039f3c334d6bf0b0ec28cd4"
+const pic = "http://47.94.136.153:8000/fig/BTC.png"
 const data = [
     [{
         "img": pic,
         "title": "DAX",
         "factor": "VOL",
         "value": "+4.08%"
-    },{
+    }, {
         "img": pic,
         "title": "DAX",
         "factor": "VOL",
         "value": "+4.08%"
-    },{
+    }, {
         "img": pic,
         "title": "DAX",
         "factor": "VOL",
         "value": "+2.08%"
-    },{
+    }, {
         "img": pic,
         "title": "白酒",
         "factor": "VOL",
         "value": "+4.08%"
-    },{
+    }, {
         "img": pic,
         "title": "白酒",
         "factor": "VOL",
@@ -53,51 +53,6 @@ const data = [
     }]
 ]
 
-
-// const data = [
-//     {
-//         "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-18-26.png",
-//         "leftText": "1",
-//         "body1": "小度在家1S白",
-//         "body2": "大屏触控，海量资源，儿童模式，分龄伴学",
-//         "tail": " 369 元"
-//     },
-//     {
-//         "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-19-6.png",
-//         "leftText": "2",
-//         "body1": "小度在家1S红",
-//         "body2": "大屏触控，海量资源，儿童模式，分龄伴学",
-//         "tail": "369 元"
-//     },
-//     {
-//         "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-19-49.png",
-//         "leftText": "3",
-//         "body1": "小度音箱",
-//         "body2": "国民音箱，海量音乐与有声内容",
-//         "tail": "90 元"
-//     },
-//     {
-//         "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-21-37.png",
-//         "leftText": "4",
-//         "body1": "小度音箱1S",
-//         "body2": "音箱+遥控器，强大声场，人气爆款",
-//         "tail": "149 元"
-//     },
-//     {
-//         "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-17-43.png",
-//         "leftText": "5",
-//         "body1": "小度大金刚",
-//         "body2": "钢铁设计，极客风格，进击小钢炮",
-//         "tail": "199 元"
-//     },
-//     {
-//         "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-20-22.png",
-//         "leftText": "6",
-//         "body1": "小度电视伴侣",
-//         "body2": "人工智能家庭影院，三合一体验",
-//         "tail": "799 元"
-//     }
-// ]
 
 const itemTemplate = index => ({
     "type": "Container",
