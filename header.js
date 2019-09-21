@@ -6,6 +6,7 @@ const header = {
     "type": "Container",
     "height": "40dp",
     "width": "100%",
+    "flex-direction": "row",
     "items": [
         {
             "type": "Text",
