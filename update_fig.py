@@ -1,6 +1,8 @@
 import pymysql
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+
 from sqlalchemy import create_engine
 conn = create_engine('mysql+pymysql://root@localhost:3306/quant?charset=utf8')
 
@@ -21,6 +23,7 @@ def draw(series, name, active):
     plt.clf()
     
 def checkTarget(iD, name):
+    print(iD, name)
     series = pd.read_sql_query('select * from series where target='+str(iD)+'  order by timestamp DESC limit 4320', conn)
     t = series[series['target'] == iD]
     t.index = t['timestamp']
