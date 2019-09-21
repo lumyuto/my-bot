@@ -68,7 +68,7 @@ const rowItemTemplate = ({
             "width": "800dp",
             "margin-left": '25dp',
             "flex-direction": "column",
-            "items": []
+            "items": [stockTemplate]
         }]
 })
 
