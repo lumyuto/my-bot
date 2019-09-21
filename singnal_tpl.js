@@ -20,7 +20,7 @@ const stockTemplate = {
     }, {
         "type": "Text",
         "font-size": "18px",
-        "text": "+5.02%",
+        "text": "${data.time}",
         "color": "#F1554D",
         "margin-right": "10dp",
     }],
