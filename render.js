@@ -23,50 +23,76 @@ const body = items => ({
     "items": items
 })
 
-const data = [
-    {
-        "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-18-26.png",
-        "leftText": "1",
-        "body1": "小度在家1S白",
-        "body2": "大屏触控，海量资源，儿童模式，分龄伴学",
-        "tail": " 369 元"
-    },
-    {
-        "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-19-6.png",
-        "leftText": "2",
-        "body1": "小度在家1S红",
-        "body2": "大屏触控，海量资源，儿童模式，分龄伴学",
-        "tail": "369 元"
-    },
-    {
-        "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-19-49.png",
-        "leftText": "3",
-        "body1": "小度音箱",
-        "body2": "国民音箱，海量音乐与有声内容",
-        "tail": "90 元"
-    },
-    {
-        "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-21-37.png",
-        "leftText": "4",
-        "body1": "小度音箱1S",
-        "body2": "音箱+遥控器，强大声场，人气爆款",
-        "tail": "149 元"
-    },
-    {
-        "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-17-43.png",
-        "leftText": "5",
-        "body1": "小度大金刚",
-        "body2": "钢铁设计，极客风格，进击小钢炮",
-        "tail": "199 元"
-    },
-    {
-        "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-20-22.png",
-        "leftText": "6",
-        "body1": "小度电视伴侣",
-        "body2": "人工智能家庭影院，三合一体验",
-        "tail": "799 元"
-    }
+const pic = "http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/item.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A41%3A47Z%2F-1%2F%2F85c3639276a62cff43ff547fb6e80f94d4ce3028a742026b06d46cd61ee63cf6"
+cosnt data = [
+    [{
+        "img": pic,
+        "title": "DAX",
+        "factor": "VOL",
+        "value": "+4.08%"
+    },{
+        "img": pic,
+        "title": "DAX",
+        "factor": "VOL",
+        "value": "+4.08%"
+    },{
+        "img": pic,
+        "title": "DAX",
+        "factor": "VOL",
+        "value": "+4.08%"
+    },{
+        "img": pic,
+        "title": "DAX",
+        "factor": "VOL",
+        "value": "+4.08%"
+    }]
 ]
+
+
+// const data = [
+//     {
+//         "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-18-26.png",
+//         "leftText": "1",
+//         "body1": "小度在家1S白",
+//         "body2": "大屏触控，海量资源，儿童模式，分龄伴学",
+//         "tail": " 369 元"
+//     },
+//     {
+//         "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-19-6.png",
+//         "leftText": "2",
+//         "body1": "小度在家1S红",
+//         "body2": "大屏触控，海量资源，儿童模式，分龄伴学",
+//         "tail": "369 元"
+//     },
+//     {
+//         "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-19-49.png",
+//         "leftText": "3",
+//         "body1": "小度音箱",
+//         "body2": "国民音箱，海量音乐与有声内容",
+//         "tail": "90 元"
+//     },
+//     {
+//         "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-21-37.png",
+//         "leftText": "4",
+//         "body1": "小度音箱1S",
+//         "body2": "音箱+遥控器，强大声场，人气爆款",
+//         "tail": "149 元"
+//     },
+//     {
+//         "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-17-43.png",
+//         "leftText": "5",
+//         "body1": "小度大金刚",
+//         "body2": "钢铁设计，极客风格，进击小钢炮",
+//         "tail": "199 元"
+//     },
+//     {
+//         "src": "https://duerstatic.bj.bcebos.com/dbp-image/DPLMaterial/image2019-6-24_19-20-22.png",
+//         "leftText": "6",
+//         "body1": "小度电视伴侣",
+//         "body2": "人工智能家庭影院，三合一体验",
+//         "tail": "799 元"
+//     }
+// ]
 
 const itemTemplate = {
     "type": "Container",
@@ -81,23 +107,23 @@ const itemTemplate = {
             "height": "100%",
             "position": "absolute",
             "scale-type": "fitXY",
-            "src": "http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/item.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A41%3A47Z%2F-1%2F%2F85c3639276a62cff43ff547fb6e80f94d4ce3028a742026b06d46cd61ee63cf6"
+            "src": "${data[0].pic}"
         }, {
             "type": "Text",
             "font-size": "39px",
-            "text": "DAX",
+            "text": "${data[0].title}",
             "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
-            "text": "VOL",
+            "text": "${data[0].factor}",
             "margin-top": "22dp",
             "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
             "color": "#F2564E",
-            "text": "+4.08%",
+            "text": "${data[0].value}",
             "text-align": "right",
             "position": "relative",
             "top": "-26dp",
@@ -106,7 +132,7 @@ const itemTemplate = {
     ]
 }
 
-const rightItemTemplate = {
+const rowItemTemplate = {
     "type": "Container",
     "height": "100dp",
     "width": "100%",
@@ -128,7 +154,7 @@ const left = ({data}) => ({
             "width": "100%",
             "direction": "vertical",
             "data": data,
-            "items": [rightItemTemplate]
+            "items": [rowItemTemplate]
         }
     ]
 })
