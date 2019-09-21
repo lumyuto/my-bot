@@ -15,19 +15,11 @@ const left = {
     "background-color": '#f00',
     "items": [
         {
-            "type": "List",
-            "height": "100%",
-            "width": "100%",
-            "direction": "vertical",
-            "position": "absolute",
-            "background-color": '#fff',
-            "items": [{
                 "type": "Image",
                 "width": "285dp",
                 "height": "177dp",
                 "scale-type": "fitXY",
                 "src": img1
-            }]
             //     "type": "Image",
             //     "width": "285dp",
             //     "height": "177dp",
