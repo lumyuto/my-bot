@@ -10,17 +10,20 @@ const stockTemplate = {
     "items": [{
         "type": "Text",
         "font-size": "24px",
+        "vertical-align": "bottom",
         "text": "${data.stock_name}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "24px",
+        "vertical-align": "bottom",
         "text": "${data.stock_symbol}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "18px",
         "text": "${data.time}",
+        "vertical-align": "bottom",
         "color": "#F1554D",
         "margin-right": "10dp",
     }],
@@ -33,16 +36,19 @@ const pTemplate = {
     "items": [{
         "type": "Text",
         "font-size": "14px",
+        "vertical-align": "bottom",
         "text": "${data.p_name}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "14px",
+        "vertical-align": "bottom",
         "text": "总收益：${data.total_gain}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "14px",
+        "vertical-align": "bottom",
         "text": "年收益：${data.annualized_gain_rate}",
         "margin-right": "10dp",
     }]
