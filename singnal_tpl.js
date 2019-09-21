@@ -58,13 +58,12 @@ const rowItemTemplate = ({
             "type": "Image",
             "width": "56dp",
             "height": "56dp",
-            "position": "absolute",
             "scale-type": "fitXY",
             "src": bug_img
         }, {
             "type": "Container",
             "height": "100%",
-            "width": "600dp",
+            "width": "800dp",
             "flex-direction": "column",
             "items": [stockTemplate, pTemplate]
         }]
