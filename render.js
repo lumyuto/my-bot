@@ -98,7 +98,7 @@ function renderNews() {
         getNewsData().then(data => {
             data = JSON.parse(JSON.stringify(data))
 
-            console.log('\n\ndata:\n' + data)
+            console.log('\n\ndata:\n' + JSON.stringify(data))
 
             const left = news_tpl
             const doc = template(
@@ -108,7 +108,7 @@ function renderNews() {
                 ])]
             )
 
-            console.log('\n\ndoc:\n'+ doc)
+            console.log('\n\ndoc:\n'+ JSON.stringify(doc))
             const document = new Document(doc)
             const DPLDirective = new RenderDocument()
             DPLDirective.setDocument(document)
