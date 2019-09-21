@@ -54,14 +54,17 @@ const rowItemTemplate = {
         itemTemplate(4)]
 }
 
+const header = require('./header.js')
+
 const left = ({data}) => ({
     "type": "Container",
     "height": "100%",
     "width": "933dp",
     "padding-left": '20dp',
-    "padding-top": '60dp',
+    "padding-top": '10dp',
     "background-color": '#353A47',
     "items": [
+        header,
         {
             "type": "List",
             "height": "100%",
