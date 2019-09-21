@@ -4,7 +4,8 @@ const refreshTpl = require('./refresh_tpl.js');
 
 const rowItemTemplate = ({
     "type": "Container",
-    "height": "30dp",
+    "height": "38dp",
+    "margin-bottom": "12dp",
     "width": "100%",
     "flex-direction": "row",
     "items": [{
@@ -16,8 +17,9 @@ const rowItemTemplate = ({
         }, {
             "type": "Text",
             "font-size": "19px",
-            "width": '400dp',
+            "width": '600dp',
             "text": "${data.title}",
+            "text-overflow": "ellipsis"
         }
     ]
 })
@@ -26,7 +28,7 @@ const left = ({data}) => ({
     "type": "Container",
     "height": "100%",
     "width": "933dp",
-    "padding-left": '20dp',
+    "padding-left": '60dp',
     "padding-top": '60dp',
     "items": [
         {
