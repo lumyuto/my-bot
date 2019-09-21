@@ -23,7 +23,6 @@ def draw(series, name, active):
     plt.clf()
     
 def checkTarget(iD, name):
-    print(iD, name)
     series = pd.read_sql_query('select * from series where target='+str(iD)+'  order by timestamp DESC limit 4320', conn)
     t = series[series['target'] == iD]
     t.index = t['timestamp']
@@ -33,6 +32,9 @@ def checkTarget(iD, name):
     
     active = (r[-1] > r.std()*1.5) | (r[-1] < -r.std()*1.5)
     draw(t.iloc[-120:], name, active)
+    
+    return {'target': iD, 'name': name, 'factor':'MOM', 'type':'bitcoin',
+            'active': active, 'value': r[-1]}
     
 tickers = pd.read_sql_query('select id, ticker from target where source="binance"', conn)
 ret_ = tickers.apply(lambda s: checkTarget(s['id'], s['ticker']), axis=1)
