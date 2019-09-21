@@ -187,8 +187,6 @@ module.exports = function render() {
             const len = Math.floor(data.length /5)-1
             const data2 = [...Array(len).keys()].map(key =>
                 [data[key*5+0],data[key*5+1],data[key*5+2],data[key*5+3],data[key*5+4]])
-
-            console.log('\n\ndata2:\n' + JSON.stringify(data2))
             const doc = template(
                 [
                     {
