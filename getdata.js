@@ -49,7 +49,7 @@ function getSingalData() {
                 stock_symbol: _.stock_symbol,
                 weight_change: _.weight_change,
                 p_name: _.name,
-                p_desc: (_.description || '').slice(10),
+                p_desc: (_.description || '').slice(0,10),
                 total_gain: _.total_gain,
                 annualized_gain_rate: _.annualized_gain_rate,
                 follower_count: _.follower_count,
