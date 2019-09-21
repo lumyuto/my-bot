@@ -61,7 +61,7 @@ const right = {
 
 
 const {getdata} = require('./getdata');
-const {radar_tpl} = require('./render.js');
+const {radar_tpl} = require('./radar_tpl.js');
 
 
 module.exports = function render() {
