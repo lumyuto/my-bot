@@ -19,19 +19,22 @@ const left = {
             "width": "285dp",
             "height": "177dp",
             "scale-type": "fitXY",
-            "src": img1
+            "src": img1,
+            "margin-bottom": "20dp",
         },{
             "type": "Image",
             "width": "285dp",
             "height": "177dp",
             "scale-type": "fitXY",
-            "src": img2
+            "src": img2,
+            "margin-bottom": "20dp",
         }, {
             "type": "Image",
             "width": "285dp",
             "height": "177dp",
             "scale-type": "fitXY",
-            "src": img3
+            "src": img3,
+            "margin-bottom": "20dp",
         }
     ],
     ...refreshTpl(25, 'Live')
