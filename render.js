@@ -67,23 +67,23 @@ const itemTemplate = index => ({
             "height": "100%",
             "position": "absolute",
             "scale-type": "fitXY",
-            "src": "${data.img}"
+            "src": "${data["+index+"].img}"
         }, {
             "type": "Text",
             "font-size": "39px",
-            "text": "${data.title}",
+            "text": "${data["+index+"].title}",
             "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
-            "text": "${data.factor}",
+            "text": "${data["+index+"].factor}",
             "margin-top": "22dp",
             "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
             "color": "#F2564E",
-            "text": "${data.value}",
+            "text": "${data["+index+"].value}",
             "text-align": "right",
             "position": "relative",
             "top": "-26dp",
@@ -185,7 +185,10 @@ module.exports = function render() {
             const doc = template(
                 [
                     {
-                        ...body([left({data}), right]),
+                        ...body([left({data: [
+                            [data[0], data[1], data[2], data[3], data[4]]
+                            [data[0], data[1], data[2], data[3], data[4]]
+                        ]}), right]),
                         ...cycleRequest,
                     }
                 ]
@@ -193,8 +196,7 @@ module.exports = function render() {
             const document = new Document(doc)
             const DPLDirective = new RenderDocument()
             DPLDirective.setDocument(document)
-    
-    
+
             resolve({
                 directives: [DPLDirective],
                 // outputSpeech: '测试一下'

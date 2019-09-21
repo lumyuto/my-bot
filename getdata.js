@@ -24,5 +24,5 @@ function getdata() {
 }
 
 module.exports = {
-    getdata: getdata,   
+    getdata: getdata,
 }
