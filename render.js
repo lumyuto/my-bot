@@ -100,7 +100,8 @@ const itemTemplate = {
             "text": "+4.08%",
             "text-align": "right",
             "position": "relative",
-            "top": "-23dp"
+            "top": "-26dp",
+            "margin-right": "10dp"
         }, 
     ]
 }
