@@ -92,6 +92,7 @@ const itemTemplate = {
             "font-size": "19px",
             "text": "VOL",
             "margin-top": "24dp",
+            "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
@@ -99,7 +100,6 @@ const itemTemplate = {
             "text": "+4.08%",
             "text-align": "right",
             "margin-left": "10dp",
-            "margin-top": "24dp",
         }, 
     ]
 }
