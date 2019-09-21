@@ -183,8 +183,11 @@ module.exports = function render() {
     return new Promise((resolve, reject) => {
         getdata().then(data => {
             data = JSON.parse(JSON.stringify(data))
-            console.log(data)
-            const data2 = [[data[0],data[1],data[2],data[3],data[4]]]
+
+            const len = Math.floor(data.length /5)-1
+            const data2 = [...Array(len).keys()].map(key =>
+                [data[key*5+0],data[key*5+1],data[key*5+2],data[key*5+3],data[key*5+4]])
+
             console.log('\n\ndata2:\n' + JSON.stringify(data2))
             const doc = template(
                 [
