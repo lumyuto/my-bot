@@ -42,9 +42,9 @@ function getSingalData() {
         connection.query('SELECT * FROM xueqiu_plog' +
         'INNER JOIN xueqiu_p ON xueqiu_p.id = xueqiu_plog.p_id' +
         'ORDER BY xueqiu_plog.created_at DESC LIMIT 50', function (error, results, fields) {
-        if (error) throw error;
-        resolve(
-            results.map(_ => ({
+            if (error) throw error;
+
+            const data = results.map(_ => ({
                 stock_name: _.stock_name,
                 stock_symbol: _.stock_symbol,
                 weight_change: _.weight_change,
@@ -53,8 +53,12 @@ function getSingalData() {
                 total_gain: _.total_gain,
                 annualized_gain_rate: _.annualized_gain_rate,
                 follower_count: _.follower_count,
-            })))
-        });
+            }))
+
+            console.log(data)
+
+            resolve(data);
+        })
     })
 }
 
