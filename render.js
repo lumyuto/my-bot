@@ -107,7 +107,7 @@ const itemTemplate = {
             "height": "100%",
             "position": "absolute",
             "scale-type": "fitXY",
-            "src": "${data[0].pic}"
+            "src": "${data[0].img}"
         }, {
             "type": "Text",
             "font-size": "39px",
