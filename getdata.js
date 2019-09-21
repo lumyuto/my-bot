@@ -55,7 +55,7 @@ function getSingalData() {
                 follower_count: _.follower_count,
             }))
 
-            console.log(data.map(_=>p_desc))
+            console.log(data.map(_=>_.p_desc))
 
             resolve(data);
         })
