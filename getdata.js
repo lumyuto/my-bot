@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
  
 connection.connect();
  
-function getdata() {
+function getRadarData() {
     return new Promise((resolve, reject) => {
         connection.query('select * from radar', function (error, results, fields) {
         if (error) throw error;
@@ -24,6 +24,20 @@ function getdata() {
     })
 }
 
+function getNewsData() {
+    return new Promise((resolve, reject) => {
+        connection.query('select * from news limit 40', function (error, results, fields) {
+        if (error) throw error;
+        resolve(
+            results.map(_ => ({
+                time: _.time,
+                title: _.title,
+            })))
+        });
+    })
+}
+
 module.exports = {
-    getdata: getdata,
+    getRadarData,
+    getNewsData
 }

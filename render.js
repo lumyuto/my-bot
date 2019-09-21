@@ -60,13 +60,14 @@ const right = {
 }
 
 
-const {getdata} = require('./getdata');
+const {getRadarData, getNewsData} = require('./getdata');
 const {radar_tpl} = require('./radar_tpl.js');
+const {news_tpl} = require('./news_tpl.js');
 
 
-module.exports = function render() {
+function renderRadar() {
     return new Promise((resolve, reject) => {
-        getdata().then(data => {
+        getRadarData().then(data => {
             data = JSON.parse(JSON.stringify(data))
 
             const len = Math.floor(data.length /5)-1
@@ -77,9 +78,7 @@ module.exports = function render() {
 
             const doc = template(
                 [body([
-                    left({
-                        data: data2 
-                    }), 
+                    left({ data: data2 }), 
                     right
                 ])]
             )
@@ -92,4 +91,32 @@ module.exports = function render() {
             })
         })
     })
+}
+
+function renderNews() {
+    return new Promise((resolve, reject) => {
+        getNewsData().then(data => {
+            data = JSON.parse(JSON.stringify(data))
+
+            const left = news_tpl
+            const doc = template(
+                [body([
+                    left({ data: data }), 
+                    right
+                ])]
+            )
+            const document = new Document(doc)
+            const DPLDirective = new RenderDocument()
+            DPLDirective.setDocument(document)
+
+            resolve({
+                directives: [DPLDirective],
+            })
+        })
+    })
+}
+
+module.exports = {
+    renderRadar,
+    renderNews,
 }
