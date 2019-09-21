@@ -15,6 +15,9 @@ class Bot extends BaseBot {
             this.addEventListener('UserEvent', (event) => {
                 console.log('\n\nUserEvent recevied: '+ event.payload.componentId + event.payload.source);
 
+                event.payload.componentId == 'REFRESH'
+                event.payload.componentId == 'MENU.Signal'
+
                 return render()
             })
 

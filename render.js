@@ -123,14 +123,15 @@ const cycleRequest = {
             "commands": [
                 {
                     "type": "SendEvent",
-                    "componentId": "Image01"
+                    "componentId": "REFRESH"
                 }
             ]
         }
     ]
 }
 
-const btnTemplate = id => ({
+const link = 'http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/'
+const btnTemplate = (id, img) => ({
     "type": "Container",
     "height": "88dp",
     "width": "66dp",
@@ -142,7 +143,7 @@ const btnTemplate = id => ({
         "position": "absolute",
         "top": "27dp",
         "left": "16dp",
-        "src": "https://duerstatic.bj.bcebos.com/dbp-image%2FDPLMaterial%2Fimage2019-6-24_19-18-26.png"
+        "src": link + img
     }],
     "onClick": [{
         "type": "SendEvent",
@@ -158,7 +159,11 @@ const right = {
     "right": "0dp",
     "top": "0dp",
     "background-color": "#30333F",
-    "items": [btnTemplate("radar"), btnTemplate("news"), btnTemplate("signal"), btnTemplate("live")]
+    "items": [
+        btnTemplate("MENU.Radar", "radar.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A05Z%2F-1%2F%2F65c92d68d73fdd2aeb68bcbdaeef34bbec4c4eb2ebd5d1cc53cedefa2cf5fb22"), 
+        btnTemplate("MENU.News", "news.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2F25e5ad481ebd9af2a1c91904f7e8ac4e912bc7eebdc093be8950e5c8a9fc8b4f"), 
+        btnTemplate("MENU.Signal", "singal.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2Fa9f56e0c1cbc85d23702a99b9982c6b606a6fbadc48bc8ea0dffe560e0d6c1c9"),
+        btnTemplate("MENU.Live", "live.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2F71d9b2f25a9f4155decb14d6f88f15a07dea5b91b12b23d8829f0e6af998f146")]
 }
 
 module.exports = function render() {
