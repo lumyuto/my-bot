@@ -39,10 +39,10 @@ const data = [
         "img": pic,
         "title": "DAX",
         "factor": "VOL",
-        "value": "+4.08%"
+        "value": "+2.08%"
     },{
         "img": pic,
-        "title": "DAX",
+        "title": "白酒",
         "factor": "VOL",
         "value": "+4.08%"
     }]
