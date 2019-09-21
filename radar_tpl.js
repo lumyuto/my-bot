@@ -54,7 +54,7 @@ const rowItemTemplate = {
         itemTemplate(4)]
 }
 
-const header = require('./header.js')
+const {header} = require('./header.js')
 
 const left = ({data}) => ({
     "type": "Container",
