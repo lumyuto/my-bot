@@ -183,10 +183,7 @@ module.exports = function render() {
     return new Promise((resolve, reject) => {
         getdata().then(data => {
             console.log(data)
-            const data2 = [
-                [data[0], data[1], data[2], data[3], data[4]]
-                [data[0], data[1], data[2], data[3], data[4]]
-            ]
+            const data2 = [[data[0]]]
             console.log('\n\ndata2:\n' + data2)
             const doc = template(
                 [
