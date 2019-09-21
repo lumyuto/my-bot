@@ -185,7 +185,7 @@ module.exports = function render() {
             data = JSON.parse(JSON.stringify(data))
             console.log(data)
             const data2 = data[0]
-            console.log('\n\ndata2:\n' + data2)
+            console.log('\n\ndata2:\n' + data[0].title)
             const doc = template(
                 [
                     {
