@@ -98,6 +98,8 @@ function renderNews() {
         getNewsData().then(data => {
             data = JSON.parse(JSON.stringify(data))
 
+            console.log('\n\ndata:\n' + data)
+
             const left = news_tpl
             const doc = template(
                 [body([
@@ -105,6 +107,8 @@ function renderNews() {
                     right
                 ])]
             )
+
+            console.log('\n\ndoc:\n'+ doc)
             const document = new Document(doc)
             const DPLDirective = new RenderDocument()
             DPLDirective.setDocument(document)
