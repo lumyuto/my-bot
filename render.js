@@ -128,7 +128,7 @@ const cycleRequest = {
     "onLoaded": [
         {
             "type": "Sequential",
-            "delayInMilliseconds": 3000,
+            "delayInMilliseconds": 10000,
             "repeatCount": 1,
             "commands": [
                 {
