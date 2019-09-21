@@ -183,6 +183,7 @@ module.exports = function render() {
     return new Promise((resolve, reject) => {
         getdata().then(data => {
             console.log(data)
+            data = JSON.parse(JSON.stringify(data))
             const data2 = [[data[0]]]
             console.log('\n\ndata2:\n' + data2)
             const doc = template(
