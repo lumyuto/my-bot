@@ -15,7 +15,7 @@ class Bot extends BaseBot {
             this.addEventListener('UserEvent', (event) => {
                 console.log('\n\nUserEvent recevied: '+ event.payload.componentId + event.payload.source);
 
-                e = event.payload.componentId
+                const e = event.payload.componentId
 
                 if(~e.indexOf('Radar')) return renderRadar()
                 if(~e.indexOf('News')) return renderNews()
