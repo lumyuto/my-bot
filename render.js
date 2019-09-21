@@ -187,7 +187,7 @@ module.exports = function render() {
                 [data[0], data[1], data[2], data[3], data[4]]
                 [data[0], data[1], data[2], data[3], data[4]]
             ]
-            console.log(data2)
+            console.log('\n\ndata2:\n' + data2)
             const doc = template(
                 [
                     {
