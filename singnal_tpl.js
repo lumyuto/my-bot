@@ -89,7 +89,7 @@ const left = ({data}) => ({
         header(['关注', '量化', '雪球', '东方财富']),
         {
             "type": "List",
-            "height": "100%",
+            "height": "480dp",
             "width": "100%",
             "direction": "vertical",
             "data": data,
