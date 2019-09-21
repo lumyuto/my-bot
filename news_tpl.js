@@ -43,11 +43,11 @@ const left = ({data}) => ({
             "height": "100%",
             "width": "100%",
             "direction": "vertical",
-            "data": data,
-            "items": [rowItemTemplate]
+            // "data": data,
+            // "items": [rowItemTemplate]
         }
     ],
-    ...refreshTpl(30)
+    // ...refreshTpl(30)
 })
 
 module.exports = {
