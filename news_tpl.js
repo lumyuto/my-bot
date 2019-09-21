@@ -11,13 +11,13 @@ const itemTemplate = index => ({
             "type": "Text",
             "font-size": "19px",
             "width": '100dp',
-            "text": "${data.time}",
+            "text": '',//"${data.time}",
             "margin-right": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
             "width": '400dp',
-            "text": "${data.title}",
+            "text": ''//"${data.title}",
         }
     ]
 })
@@ -27,7 +27,6 @@ const rowItemTemplate = {
     "height": "100dp",
     "width": "100%",
     "margin-bottom": "5dp",
-    "flex-direction": "row",
     "items": [itemTemplate]
 }
 
@@ -44,7 +43,7 @@ const left = ({data}) => ({
             "width": "100%",
             "direction": "vertical",
             "data": data,
-            // "items": [rowItemTemplate]
+            "items": [rowItemTemplate]
         }
     ],
     ...refreshTpl(30)
