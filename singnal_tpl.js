@@ -59,7 +59,7 @@ const rowItemTemplate = ({
             "width": "56dp",
             "height": "56dp",
             "scale-type": "fitXY",
-            "src": bug_img
+            "src": "${data.buy_sell_icon}"
         }, {
             "type": "Container",
             "height": "100%",
