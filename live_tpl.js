@@ -12,6 +12,7 @@ const left = {
     "width": "933dp",
     "padding-left": '60dp',
     "padding-top": '60dp',
+    "background-color": '#f00',
     "items": [
         {
             "type": "List",
