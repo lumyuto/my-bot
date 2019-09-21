@@ -75,9 +75,6 @@ const itemTemplate = {
     "margin-right": "12dp",
     "position": "relative",
     "background-color": "#ffffff",
-    "flex-direction": "column",
-    "justify-content": "flex-end",
-    "align-items": "space-between",
     "items": [{
             "type": "Image",
             "width": "100%",
@@ -87,24 +84,19 @@ const itemTemplate = {
         }, {
             "type": "Text",
             "font-size": "39px",
-            // "position": "absolute",
-            // "left": "15dp",
             "text": "DAX"
         }, {
             "type": "Text",
             "font-size": "19px",
-            // "position": "absolute",
-            // "left": "15dp",
-            // "bottom": "9dp",
-            "text": "VOL"
+            "text": "VOL",
+            "margin-top": "61dp",
         }, {
             "type": "Text",
             "font-size": "19px",
-            // "position": "absolute",
             "color": "#F2564E",
-            // "right": "15dp",
-            // "bottom": "9dp",
-            "text": "+4.08%"
+            "text": "+4.08%",
+            "margin-left": "85dp",
+            "margin-top": "61dp",
         }, 
     ]
 }
