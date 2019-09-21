@@ -45,6 +45,11 @@ const data = [
         "title": "白酒",
         "factor": "VOL",
         "value": "+4.08%"
+    },{
+        "img": pic,
+        "title": "白酒",
+        "factor": "VOL",
+        "value": "+4.08%"
     }]
 ]
 
