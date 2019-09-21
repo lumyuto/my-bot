@@ -16,7 +16,7 @@ function getdata() {
             img: "http://47.94.136.153:8000/fig/"+_.name+".png",
             title: _.name,
             active: _.active,
-            value: (_.value>0?'%':'-%') + (Math.abs(Math.floor(_.value*10000)/100)),
+            value: Math.floor(_.value*10000)/100 + '%',
             pos: _.value>0,
             factor: _.factor,
         })))

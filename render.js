@@ -23,36 +23,6 @@ const body = items => ({
     "items": items
 })
 
-// const pic = "http://47.94.136.153:8000/fig/BTC.png"
-// const data = [
-//     [{
-//         "img": pic,
-//         "title": "DAX",
-//         "factor": "VOL",
-//         "value": "+4.08%"
-//     }, {
-//         "img": pic,
-//         "title": "DAX",
-//         "factor": "VOL",
-//         "value": "+4.08%"
-//     }, {
-//         "img": pic,
-//         "title": "DAX",
-//         "factor": "VOL",
-//         "value": "+2.08%"
-//     }, {
-//         "img": pic,
-//         "title": "白酒",
-//         "factor": "VOL",
-//         "value": "+4.08%"
-//     }, {
-//         "img": pic,
-//         "title": "白酒",
-//         "factor": "VOL",
-//         "value": "+4.08%"
-//     }]
-// ]
-
 
 const itemTemplate = index => ({
     "type": "Container",
@@ -82,7 +52,7 @@ const itemTemplate = index => ({
         }, {
             "type": "Text",
             "font-size": "19px",
-            "color": "#F2564E",
+            "color": "${data["+index+"].pos ? '#F2564E' : '#17A56B'}",
             "text": "${data["+index+"].value}",
             "text-align": "right",
             "position": "relative",
