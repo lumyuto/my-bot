@@ -23,7 +23,7 @@ const body = items => ({
     "items": items
 })
 
-const pic = "http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/item.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A41%3A47Z%2F-1%2F%2F85c3639276a62cff43ff547fb6e80f94d4ce3028a742026b06d46cd61ee63cf6"
+const pic = "http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/item.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T06%3A33%3A17Z%2F-1%2F%2Fcf1b783dadf45b0d952103522b075eb6746a60b1846befd5e4edfdb273e15537"
 const data = [
     [{
         "img": pic,
