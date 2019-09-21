@@ -37,7 +37,21 @@ function getNewsData() {
     })
 }
 
+function getSingalData() {
+    return new Promise((resolve, reject) => {
+        connection.query('select * from news order by timestamp desc limit 40 ', function (error, results, fields) {
+        if (error) throw error;
+        resolve(
+            results.map(_ => ({
+                time: _.time,
+                title: _.title,
+            })))
+        });
+    })
+}
+
 module.exports = {
     getRadarData,
-    getNewsData
+    getNewsData,
+    getSingalData,
 }

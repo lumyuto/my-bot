@@ -1,5 +1,5 @@
 const BaseBot = require('bot-sdk');
-const {renderRadar, renderNews,} = require('./render')
+const {renderRadar, renderNews, renderSingnal} = require('./render')
 
 class Bot extends BaseBot {
     /**
@@ -9,7 +9,7 @@ class Bot extends BaseBot {
             super(postData);
 
             this.addLaunchHandler(() => {
-                return renderNews()
+                return renderSingnal()
             });
 
             this.addEventListener('UserEvent', (event) => {
@@ -18,7 +18,7 @@ class Bot extends BaseBot {
                 event.payload.componentId == 'REFRESH'
                 event.payload.componentId == 'MENU.Signal'
 
-                return renderNews()
+                return renderSingnal()
             })
 
             /**
