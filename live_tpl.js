@@ -19,6 +19,7 @@ const left = {
             "height": "100%",
             "width": "100%",
             "direction": "vertical",
+            "position": "absolute",
             "background-color": '#fff',
             "items": [{
                 "type": "Image",
