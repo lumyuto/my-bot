@@ -1,5 +1,4 @@
 const BaseBot = require('bot-sdk');
-const fs = require('fs');
 
 const Document = BaseBot.Directive.DPL.Document
 const RenderDocument = BaseBot.Directive.DPL.RenderDocument
@@ -44,7 +43,7 @@ const btnTemplate = (id, active=false, img) => ({
     }]
 })
 
-const right = {
+const right = activeIndex => ({
     "type": "Container",
     "height": "100%",
     "width": "66dp",
@@ -53,11 +52,11 @@ const right = {
     "top": "0dp",
     "background-color": "#30333F",
     "items": [
-        btnTemplate("MENU.Radar", true, "radar.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A05Z%2F-1%2F%2F65c92d68d73fdd2aeb68bcbdaeef34bbec4c4eb2ebd5d1cc53cedefa2cf5fb22"), 
-        btnTemplate("MENU.News", false, "news.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2F25e5ad481ebd9af2a1c91904f7e8ac4e912bc7eebdc093be8950e5c8a9fc8b4f"), 
-        btnTemplate("MENU.Signal", false, "singal.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2Fa9f56e0c1cbc85d23702a99b9982c6b606a6fbadc48bc8ea0dffe560e0d6c1c9"),
-        btnTemplate("MENU.Live", false, "live.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2F71d9b2f25a9f4155decb14d6f88f15a07dea5b91b12b23d8829f0e6af998f146")]
-}
+        btnTemplate("MENU.Radar", activeIndex==1, "radar.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A05Z%2F-1%2F%2F65c92d68d73fdd2aeb68bcbdaeef34bbec4c4eb2ebd5d1cc53cedefa2cf5fb22"), 
+        btnTemplate("MENU.News", activeIndex==2, "news.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2F25e5ad481ebd9af2a1c91904f7e8ac4e912bc7eebdc093be8950e5c8a9fc8b4f"), 
+        btnTemplate("MENU.Signal", activeIndex==3, "singal.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2Fa9f56e0c1cbc85d23702a99b9982c6b606a6fbadc48bc8ea0dffe560e0d6c1c9"),
+        btnTemplate("MENU.Live", activeIndex==4, "live.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A21%3A04Z%2F-1%2F%2F71d9b2f25a9f4155decb14d6f88f15a07dea5b91b12b23d8829f0e6af998f146")]
+})
 
 
 const {getRadarData, getNewsData, getSingalData} = require('./getdata');
@@ -80,7 +79,7 @@ function renderRadar() {
             const doc = template(
                 [body([
                     left({ data: data2 }), 
-                    right
+                    right(1)
                 ])]
             )
             const document = new Document(doc)
@@ -105,7 +104,7 @@ function renderNews() {
             const doc = template(
                 [body([
                     left({ data: data }), 
-                    right
+                    right(2)
                 ])]
             )
 
@@ -132,7 +131,7 @@ function renderSingnal() {
             const doc = template(
                 [body([
                     left({ data: data }), 
-                    right
+                    right(3)
                 ])]
             )
 

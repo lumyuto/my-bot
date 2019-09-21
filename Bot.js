@@ -9,7 +9,7 @@ class Bot extends BaseBot {
             super(postData);
 
             this.addLaunchHandler(() => {
-                return renderSingnal()
+                return renderRadar()
             });
 
             this.addEventListener('UserEvent', (event) => {
