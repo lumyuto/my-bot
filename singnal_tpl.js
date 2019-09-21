@@ -40,12 +40,12 @@ const pTemplate = {
     }, {
         "type": "Text",
         "font-size": "14px",
-        "text": "${data.p_desc}",
+        "text": "总收益：${data.total_gain}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "14px",
-        "text": "${data.total_gain}",
+        "text": "年化收益：${data.annualized_gain_rate}",
         "margin-right": "10dp",
     }]
 }
