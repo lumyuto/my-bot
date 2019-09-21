@@ -76,6 +76,12 @@ const itemTemplate = {
     "position": "relative",
     "background-color": "#ffffff",
     "items": [{
+        "type": "Container",
+        "height": "100%",
+        "width": "100%",
+        "position": "relative",
+        "background-color": "#ffffff",
+        "items": [{
             "type": "Image",
             "width": "100%",
             "height": "100%",
@@ -102,8 +108,8 @@ const itemTemplate = {
             "right": "15dp",
             "bottom": "9dp",
             "text": "+4.08%"
-        }, 
-    ]
+        }]
+    }]
 }
 
 const rightItemTemplate = {
