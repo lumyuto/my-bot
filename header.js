@@ -8,27 +8,14 @@ const header = items => ({
     "width": "100%",
     "flex-direction": "row",
     "margin-bottom": '20dp',
-    "items": [
+    "items": items.map(item => ([
         {
             "type": "Text",
             "font-size": "19px",
             "vertical-align": "bottom",
-            "text": "智能",
+            "text": item,
             "margin-right": "30dp",
-        }, {
-            "type": "Text",
-            "font-size": "19px",
-            "vertical-align": "bottom",
-            "text": "智能",
-            "margin-right": "30dp",
-        }, {
-            "type": "Text",
-            "font-size": "19px",
-            "vertical-align": "bottom",
-            "text": "智能",
-            "margin-right": "30dp",
-        }
-    ]
+        }))
 })
 
 module.exports = {
