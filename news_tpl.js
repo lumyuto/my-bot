@@ -25,14 +25,17 @@ const rowItemTemplate = ({
     ]
 })
 
+const header = require('./header.js')
+
 const left = ({data}) => ({
     "type": "Container",
     "height": "100%",
     "width": "933dp",
     "padding-left": '60dp',
-    "padding-top": '60dp',
+    "padding-top": '10dp',
     "background-color": '#353A47',
     "items": [
+        header(['智能', '关注', '国际', 'A股', '数字货币', '大宗商品', '贵金属']),
         {
             "type": "List",
             "height": "100%",

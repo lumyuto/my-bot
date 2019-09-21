@@ -17,6 +17,4 @@ const header = items => ({
         }))
 })
 
-module.exports = {
-    header: header
-}
+module.exports = header
