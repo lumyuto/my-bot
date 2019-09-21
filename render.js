@@ -94,7 +94,7 @@ const data = [
 //     }
 // ]
 
-const itemTemplate = {
+const itemTemplate = index => ({
     "type": "Container",
     "height": "100dp",
     "width": "160dp",
@@ -107,30 +107,30 @@ const itemTemplate = {
             "height": "100%",
             "position": "absolute",
             "scale-type": "fitXY",
-            "src": "${data[0].img}"
+            "src": "${data["+index+"].img}"
         }, {
             "type": "Text",
             "font-size": "39px",
-            "text": "${data[0].title}",
+            "text": "${data["+index+"].title}",
             "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
-            "text": "${data[0].factor}",
+            "text": "${data["+index+"].factor}",
             "margin-top": "22dp",
             "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
             "color": "#F2564E",
-            "text": "${data[0].value}",
+            "text": "${data["+index+"].value}",
             "text-align": "right",
             "position": "relative",
             "top": "-26dp",
             "margin-right": "10dp"
         }, 
     ]
-}
+})
 
 const rowItemTemplate = {
     "type": "Container",
@@ -138,7 +138,12 @@ const rowItemTemplate = {
     "width": "100%",
     "margin-bottom": "28dp",
     "flex-direction": "row",
-    "items": [itemTemplate, itemTemplate, itemTemplate, itemTemplate, itemTemplate]
+    "items": [
+        itemTemplate(0), 
+        itemTemplate(1), 
+        itemTemplate(2), 
+        itemTemplate(3), 
+        itemTemplate(4)]
 }
 
 const left = ({data}) => ({
