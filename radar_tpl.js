@@ -64,7 +64,7 @@ const left = ({data}) => ({
     "padding-top": '10dp',
     "background-color": '#353A47',
     "items": [
-        header,
+        header(['智能', '关注', '国际', 'A股', '数字货币', '大宗商品', '贵金属']),
         {
             "type": "List",
             "height": "100%",

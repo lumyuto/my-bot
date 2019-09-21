@@ -2,12 +2,12 @@
 
 
 
-const header = {
+const header = items => ({
     "type": "Container",
     "height": "40dp",
     "width": "100%",
     "flex-direction": "row",
-    "margin-bottom": '10dp',
+    "margin-bottom": '20dp',
     "items": [
         {
             "type": "Text",
@@ -29,7 +29,7 @@ const header = {
             "margin-right": "30dp",
         }
     ]
-}
+})
 
 module.exports = {
     header: header
