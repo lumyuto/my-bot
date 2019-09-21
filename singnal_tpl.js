@@ -8,13 +8,44 @@ const stockTemplate = {
     "type": "Container",
     "height": "40dp",
     "width": "100%",
-    "items": [],
+    "items": [{
+        "type": "Text",
+        "font-size": "24px",
+        "text": "贵州茅台",
+        "margin-right": "10dp",
+    }, {
+        "type": "Text",
+        "font-size": "24px",
+        "text": "600519",
+        "margin-right": "10dp",
+    }, {
+        "type": "Text",
+        "font-size": "18px",
+        "text": "+5.02%",
+        "color": "F1554D",
+        "margin-right": "10dp",
+    }],
 }
 const pTemplate = {
     "type": "Container",
     "height": "30dp",
     "width": "100%",
-    "items": []
+    "items": [{
+        "type": "Text",
+        "font-size": "14px",
+        "text": "日进斗金岁岁稳盈",
+        "margin-right": "10dp",
+    }, {
+        "type": "Text",
+        "font-size": "19px",
+        "text": "",
+        "margin-right": "10dp",
+    }, {
+        "type": "Text",
+        "font-size": "19px",
+        "text": "",
+        "margin-right": "10dp",
+    }]
 }
 
 const rowItemTemplate = ({
