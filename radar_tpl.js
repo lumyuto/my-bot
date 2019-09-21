@@ -1,5 +1,7 @@
 
 
+const refreshTpl = require('./refresh_tpl.js');
+
 const itemTemplate = index => ({
     "type": "Container",
     "height": "100dp",
@@ -67,7 +69,8 @@ const left = ({data}) => ({
             "data": data,
             "items": [rowItemTemplate]
         }
-    ]
+    ],
+    ...refreshTpl(10)
 })
 
 module.exports = {
