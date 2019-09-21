@@ -181,7 +181,7 @@ const {getdata} = require('./getdata');
 
 module.exports = function render() {
     return new Promise((resolve, reject) => {
-        getdata().then(data => {
+        getdata().then(datadata => {
             const doc = template(
                 [
                     {
