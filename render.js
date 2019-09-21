@@ -79,7 +79,7 @@ const itemTemplate = {
             "width": "100%",
             "height": "100%",
             "position": "absolute",
-            "src": "${data.src}"
+            "src": "http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/item.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T04%3A34%3A53Z%2F-1%2F%2F64c8f50f68dc59a5db57ad635686e4cf0f65f4ae35185dbcdb5767d91147259c"
         }, {
             "type": "Text",
             "font-size": "39px",
@@ -95,7 +95,7 @@ const itemTemplate = {
             "text": "VOL"
         }, {
             "type": "Text",
-            "font-size": "39px",
+            "font-size": "19px",
             "position": "absolute",
             "color": "#F2564E",
             "right": "15dp",
