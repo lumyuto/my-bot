@@ -44,7 +44,7 @@ function getSingalData() {
     return new Promise((resolve, reject) => {
         connection.query('SELECT * FROM xueqiu_plog ' +
         'INNER JOIN xueqiu_p ON xueqiu_p.id = xueqiu_plog.p_id ' +
-        'ORDER BY xueqiu_plog.created_at DESC LIMIT 50', function (error, results, fields) {
+        'ORDER BY xueqiu_plog.created_at DESC LIMIT 10', function (error, results, fields) {
             if (error) throw error;
 
             const data = results.map(_ => ({
