@@ -86,7 +86,7 @@ const left = ({data}) => ({
     "padding-top": '10dp',
     "background-color": '#353A47',
     "items": [
-        header('量化', '雪球', '东方财富'),
+        header(['关注', '量化', '雪球', '东方财富']),
         {
             "type": "List",
             "height": "100%",
