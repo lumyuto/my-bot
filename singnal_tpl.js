@@ -45,7 +45,7 @@ const pTemplate = {
     }, {
         "type": "Text",
         "font-size": "19px",
-        "text": "${data.p_name}",
+        "text": "${data.total_gain}",
         "margin-right": "10dp",
     }]
 }
@@ -68,7 +68,7 @@ const rowItemTemplate = ({
             "width": "800dp",
             "margin-left": '25dp',
             "flex-direction": "column",
-            "items": [stockTemplate, pTemplate]
+            "items": []
         }]
 })
 
