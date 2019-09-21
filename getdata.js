@@ -48,7 +48,7 @@ function getSingalData() {
             if (error) throw error;
 
             const data = results.map(_ => ({
-                time: _.created_at.slice(5,10) +' '+ _.created_at.slice(11,16),
+                time: (''+_.created_at).slice(5,10) +' '+ (''+_.created_at).slice(11,16),
                 stock_name: _.stock_name,
                 stock_symbol: _.stock_symbol,
                 weight_change: _.weight_change,
