@@ -99,7 +99,7 @@ const itemTemplate = {
             "color": "#F2564E",
             "text": "+4.08%",
             "text-align": "right",
-            "margin-left": "10dp",
+            "position": "relative",
         }, 
     ]
 }
