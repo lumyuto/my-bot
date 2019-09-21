@@ -63,6 +63,7 @@ const {getRadarData, getNewsData, getSingalData} = require('./getdata');
 const {radar_tpl} = require('./radar_tpl.js');
 const {news_tpl} = require('./news_tpl.js');
 const {singnal_tpl} = require('./singnal_tpl.js');
+const {live_tpl} = require('./live_tpl.js');
 
 
 function renderRadar() {
@@ -147,8 +148,27 @@ function renderSingnal() {
     })
 }
 
+function renderLive() {
+    return new Promise((resolve, reject) => {
+        const left = live_tpl
+        const doc = template(
+            [body([left, right(4)])]
+        )
+
+        console.log('\n\ndoc:\n'+ JSON.stringify(doc))
+        const document = new Document(doc)
+        const DPLDirective = new RenderDocument()
+        DPLDirective.setDocument(document)
+
+        return {
+            directives: [DPLDirective],
+        }
+    })
+}
+
 module.exports = {
     renderRadar,
     renderNews,
     renderSingnal,
+    renderLive,
 }

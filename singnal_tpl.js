@@ -92,7 +92,7 @@ const left = ({data}) => ({
             "items": [rowItemTemplate]
         }
     ],
-    ...refreshTpl(25, 'Singal')
+    ...refreshTpl(25, 'Signal')
 })
 
 module.exports = {

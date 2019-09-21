@@ -1,5 +1,5 @@
 const BaseBot = require('bot-sdk');
-const {renderRadar, renderNews, renderSingnal} = require('./render')
+const {renderRadar, renderNews, renderSingnal, renderLive} = require('./render')
 
 class Bot extends BaseBot {
     /**
@@ -20,7 +20,7 @@ class Bot extends BaseBot {
                 if(~e.indexOf('Radar')) return renderRadar()
                 if(~e.indexOf('News')) return renderNews()
                 if(~e.indexOf('Signal')) return renderSingnal()
-                // if(e.indexOf('Singal')) return renderSingnal()
+                if(~e.indexOf('Live')) return renderLive()
             })
 
             /**
