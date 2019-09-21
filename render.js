@@ -60,7 +60,7 @@ const right = {
 }
 
 
-const {getRadarData, getNewsData} = require('./getdata');
+const {getRadarData, getNewsData, getSingalData} = require('./getdata');
 const {radar_tpl} = require('./radar_tpl.js');
 const {news_tpl} = require('./news_tpl.js');
 const {singnal_tpl} = require('./singnal_tpl.js');
