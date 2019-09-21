@@ -35,7 +35,7 @@ const pTemplate = {
     "items": [{
         "type": "Text",
         "font-size": "14px",
-        // "text": "${data.p_name}",
+        "text": "${data.p_name}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
