@@ -182,13 +182,16 @@ const {getdata} = require('./getdata');
 module.exports = function render() {
     return new Promise((resolve, reject) => {
         getdata().then(data => {
+            console.log(data)
+            const data2 = [
+                [data[0], data[1], data[2], data[3], data[4]]
+                [data[0], data[1], data[2], data[3], data[4]]
+            ]
+            console.log(data2)
             const doc = template(
                 [
                     {
-                        ...body([left({data: [
-                            [data[0], data[1], data[2], data[3], data[4]]
-                            [data[0], data[1], data[2], data[3], data[4]]
-                        ]}), right]),
+                        ...body([left({ data: data2 }), right]),
                         ...cycleRequest,
                     }
                 ]
