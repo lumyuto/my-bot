@@ -13,11 +13,11 @@ const left = {
     "padding-left": '60dp',
     "padding-top": '60dp',
     "background-color": '#353A47',
-    "flex-direction": "column",
+    "flex-direction": "row",
     "items": [
         {
             "type": "Image",
-            "width": "488dp",
+            "width": "445dp",
             "height": "250dp",
             "scale-type": "fitXY",
             "src": img1,
@@ -25,7 +25,7 @@ const left = {
             "margin-right": "20dp",
         },{
             "type": "Image",
-            "width": "445dp",
+            "width": "488dp",
             "height": "250dp",
             "scale-type": "fitXY",
             "src": img2,
