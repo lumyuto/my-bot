@@ -48,7 +48,6 @@ function getSingalData() {
             if (error) throw error;
 
             const data = results.map(_ => ({
-                created_at: _.created_at,
                 time: _.created_at.toISOString().slice(5,10) +' '+ _.created_at.toISOString().slice(11,16),
                 stock_name: _.stock_name,
                 stock_symbol: _.stock_symbol,
@@ -60,8 +59,6 @@ function getSingalData() {
                 annualized_gain_rate: _.annualized_gain_rate,
                 follower_count: _.follower_count,
             }))
-
-            console.log(results)
 
             resolve(data);
         })
