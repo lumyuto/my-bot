@@ -12,6 +12,7 @@ const left = {
     "width": "933dp",
     "padding-left": '60dp',
     "padding-top": '60dp',
+    "background-color": '#fff',
     // "items": [
     //     {
     //         "type": "List",
@@ -39,7 +40,7 @@ const left = {
     //         }]
     //     }
     // ],
-    ...refreshTpl(25, 'Live')
+    // ...refreshTpl(25, 'Live')
 }
 
 module.exports = {
