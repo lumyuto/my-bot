@@ -177,19 +177,21 @@ const right = {
 }
 
 module.exports = function render() {
-    const doc = template(
-        [
-            {
-                ...body([left({data}), right]),
-                ...cycleRequest,
-            }
-        ]
-    )
-    const document = new Document(doc)
-    const DPLDirective = new RenderDocument()
-    DPLDirective.setDocument(document)
-    return {
-        directives: [DPLDirective],
-        // outputSpeech: '测试一下'
-    };
+    return new Promise((resolve, reject) => {
+        const doc = template(
+            [
+                {
+                    ...body([left({data}), right]),
+                    ...cycleRequest,
+                }
+            ]
+        )
+        const document = new Document(doc)
+        const DPLDirective = new RenderDocument()
+        DPLDirective.setDocument(document)
+        return {
+            directives: [DPLDirective],
+            // outputSpeech: '测试一下'
+        };
+    })
 }
