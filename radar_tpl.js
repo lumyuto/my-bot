@@ -67,7 +67,7 @@ const left = ({data}) => ({
         header(['智能', '关注', '国际', 'A股', '数字货币', '大宗商品', '贵金属']),
         {
             "type": "List",
-            "height": "100%",
+            "height": "530dp",
             "width": "100%",
             "direction": "vertical",
             "data": data,
