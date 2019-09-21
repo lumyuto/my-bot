@@ -8,8 +8,7 @@ const header = items => ({
     "width": "100%",
     "flex-direction": "row",
     "margin-bottom": '20dp',
-    "items": items.map(item => ([
-        {
+    "items": items.map(item => ({
             "type": "Text",
             "font-size": "19px",
             "vertical-align": "bottom",
