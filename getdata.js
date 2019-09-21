@@ -26,7 +26,7 @@ function getRadarData() {
 
 function getNewsData() {
     return new Promise((resolve, reject) => {
-        connection.query('select * from news limit 40 order by timestamp desc', function (error, results, fields) {
+        connection.query('select * from news order by timestamp desc limit 40 ', function (error, results, fields) {
         if (error) throw error;
         resolve(
             results.map(_ => ({
