@@ -1,8 +1,6 @@
 
 
 const refreshTpl = require('./refresh_tpl.js');
-const bug_img = 'http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/buy.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T19%3A50%3A29Z%2F-1%2F%2Fd0e3f0acebcd7965a57282061ee1b5c92139c27fcbe5ff83030a7692340957a2'
-const sell_img = 'http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/sell.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2019-09-21T19%3A50%3A29Z%2F-1%2F%2Fa4493d560a68f23c8205c1d03c7a5dcb8b23609fddb617675553f639d742a618'
 
 const stockTemplate = {
     "type": "Container",
