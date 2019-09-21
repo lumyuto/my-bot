@@ -23,35 +23,35 @@ const body = items => ({
     "items": items
 })
 
-const pic = "http://47.94.136.153:8000/fig/BTC.png"
-const data = [
-    [{
-        "img": pic,
-        "title": "DAX",
-        "factor": "VOL",
-        "value": "+4.08%"
-    }, {
-        "img": pic,
-        "title": "DAX",
-        "factor": "VOL",
-        "value": "+4.08%"
-    }, {
-        "img": pic,
-        "title": "DAX",
-        "factor": "VOL",
-        "value": "+2.08%"
-    }, {
-        "img": pic,
-        "title": "白酒",
-        "factor": "VOL",
-        "value": "+4.08%"
-    }, {
-        "img": pic,
-        "title": "白酒",
-        "factor": "VOL",
-        "value": "+4.08%"
-    }]
-]
+// const pic = "http://47.94.136.153:8000/fig/BTC.png"
+// const data = [
+//     [{
+//         "img": pic,
+//         "title": "DAX",
+//         "factor": "VOL",
+//         "value": "+4.08%"
+//     }, {
+//         "img": pic,
+//         "title": "DAX",
+//         "factor": "VOL",
+//         "value": "+4.08%"
+//     }, {
+//         "img": pic,
+//         "title": "DAX",
+//         "factor": "VOL",
+//         "value": "+2.08%"
+//     }, {
+//         "img": pic,
+//         "title": "白酒",
+//         "factor": "VOL",
+//         "value": "+4.08%"
+//     }, {
+//         "img": pic,
+//         "title": "白酒",
+//         "factor": "VOL",
+//         "value": "+4.08%"
+//     }]
+// ]
 
 
 const itemTemplate = index => ({
@@ -67,23 +67,23 @@ const itemTemplate = index => ({
             "height": "100%",
             "position": "absolute",
             "scale-type": "fitXY",
-            "src": "${data["+index+"].img}"
+            "src": "${data.img}"
         }, {
             "type": "Text",
             "font-size": "39px",
-            "text": "${data["+index+"].title}",
+            "text": "${data.title}",
             "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
-            "text": "${data["+index+"].factor}",
+            "text": "${data.factor}",
             "margin-top": "22dp",
             "margin-left": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
             "color": "#F2564E",
-            "text": "${data["+index+"].value}",
+            "text": "${data.value}",
             "text-align": "right",
             "position": "relative",
             "top": "-26dp",
@@ -181,7 +181,7 @@ const {getdata} = require('./getdata');
 
 module.exports = function render() {
     return new Promise((resolve, reject) => {
-        getdata().then(datadata => {
+        getdata().then(data => {
             const doc = template(
                 [
                     {
