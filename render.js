@@ -189,9 +189,9 @@ module.exports = function render() {
         const document = new Document(doc)
         const DPLDirective = new RenderDocument()
         DPLDirective.setDocument(document)
-        return {
+        resolve({
             directives: [DPLDirective],
             // outputSpeech: '测试一下'
-        };
+        })
     })
 }
