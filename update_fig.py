@@ -1,4 +1,6 @@
 import pymysql
+import pandas as pd
+import numpy as np
 from sqlalchemy import create_engine
 conn = create_engine('mysql+pymysql://root@localhost:3306/quant?charset=utf8')
 
@@ -29,3 +31,7 @@ def checkTarget(iD, name):
     active = (r[-1] > r.std()*1.5) | (r[-1] < -r.std()*1.5)
     draw(t.iloc[-120:], name, active)
     
+tickers = pd.read_sql_query('select id, ticker from target where source="binance"', conn)
+ret_ = tickers.apply(lambda s: checkTarget(s['id'], s['ticker']), axis=1)
+ret = pd.DataFrame(list(ret_))
+ret.to_sql('radar', conn, if_exists='replace')
