@@ -10,15 +10,16 @@ const rowItemTemplate = ({
     "flex-direction": "row",
     "items": [{
             "type": "Text",
-            "font-size": "19px",
+            "font-size": "22px",
             "width": '100dp',
             "text": "${data.time}",
             "margin-right": "10dp",
         }, {
             "type": "Text",
-            "font-size": "19px",
+            "font-size": "22px",
             "width": '600dp',
             "text": "${data.title}",
+            "max-lines": 1,
             "text-overflow": "ellipsis"
         }
     ]
@@ -40,7 +41,7 @@ const left = ({data}) => ({
             "items": [rowItemTemplate]
         }
     ],
-    ...refreshTpl(30)
+    ...refreshTpl(25)
 })
 
 module.exports = {
