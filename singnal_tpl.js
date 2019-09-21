@@ -8,6 +8,7 @@ const stockTemplate = {
     "type": "Container",
     "height": "40dp",
     "width": "100%",
+    "flex-direction": "row",
     "items": [{
         "type": "Text",
         "font-size": "24px",
@@ -22,7 +23,7 @@ const stockTemplate = {
         "type": "Text",
         "font-size": "18px",
         "text": "+5.02%",
-        "color": "F1554D",
+        "color": "#F1554D",
         "margin-right": "10dp",
     }],
 }
@@ -30,6 +31,7 @@ const pTemplate = {
     "type": "Container",
     "height": "30dp",
     "width": "100%",
+    "flex-direction": "row",
     "items": [{
         "type": "Text",
         "font-size": "14px",
@@ -64,6 +66,7 @@ const rowItemTemplate = ({
             "type": "Container",
             "height": "100%",
             "width": "800dp",
+            "margin-left": '25dp',
             "flex-direction": "column",
             "items": [stockTemplate, pTemplate]
         }]
