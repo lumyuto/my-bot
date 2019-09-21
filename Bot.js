@@ -19,7 +19,7 @@ class Bot extends BaseBot {
 
                 if(~e.indexOf('Radar')) return renderRadar()
                 if(~e.indexOf('News')) return renderNews()
-                if(~e.indexOf('Singnal')) return renderSingnal()
+                if(~e.indexOf('Signal')) return renderSingnal()
                 // if(e.indexOf('Singal')) return renderSingnal()
             })
 
