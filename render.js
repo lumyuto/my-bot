@@ -73,6 +73,7 @@ const itemTemplate = {
     "height": "100dp",
     "width": "160dp",
     "margin-right": "12dp",
+    "position": "relative",
     "background-color": "#ffffff",
     "items": [{
             "type": "Image",
