@@ -39,12 +39,20 @@ function getNewsData() {
 
 function getSingalData() {
     return new Promise((resolve, reject) => {
-        connection.query('select * from news order by timestamp desc limit 40 ', function (error, results, fields) {
+        connection.query('SELECT * FROM xueqiu_plog' +
+        'INNER JOIN xueqiu_p ON xueqiu_p.id = xueqiu_plog.p_id' +
+        'ORDER BY xueqiu_plog.created_at DESC LIMIT 50', function (error, results, fields) {
         if (error) throw error;
         resolve(
             results.map(_ => ({
-                time: _.time,
-                title: _.title,
+                stock_name: _.stock_name,
+                stock_symbol: _.stock_symbol,
+                weight_change: _.weight_change,
+                p_name: _.name,
+                p_desc: _.description,
+                total_gain: _.total_gain,
+                annualized_gain_rate: _.annualized_gain_rate,
+                follower_count: _.follower_count,
             })))
         });
     })

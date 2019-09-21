@@ -12,12 +12,12 @@ const stockTemplate = {
     "items": [{
         "type": "Text",
         "font-size": "24px",
-        "text": "贵州茅台",
+        "text": "${data.stock_name}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "24px",
-        "text": "600519",
+        "text": "${data.stock_symbol}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
@@ -35,17 +35,17 @@ const pTemplate = {
     "items": [{
         "type": "Text",
         "font-size": "14px",
-        "text": "日进斗金岁岁稳盈",
+        "text": "${data.p_name}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "19px",
-        "text": "",
+        "text": "${data.p_desc}",
         "margin-right": "10dp",
     }, {
         "type": "Text",
         "font-size": "19px",
-        "text": "",
+        "text": "${data.p_name}",
         "margin-right": "10dp",
     }]
 }
