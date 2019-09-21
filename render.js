@@ -23,93 +23,6 @@ const body = items => ({
     "items": items
 })
 
-
-const itemTemplate = index => ({
-    "type": "Container",
-    "height": "100dp",
-    "width": "160dp",
-    "margin-right": "12dp",
-    "position": "relative",
-    "background-color": "#ffffff",
-    "items": [{
-            "type": "Image",
-            "width": "100%",
-            "height": "100%",
-            "position": "absolute",
-            "scale-type": "fitXY",
-            "src": "${data["+index+"].img}"
-        }, {
-            "type": "Text",
-            "font-size": "39px",
-            "text": "${data["+index+"].title}",
-            "margin-left": "10dp",
-        }, {
-            "type": "Text",
-            "font-size": "19px",
-            "text": "${data["+index+"].factor}",
-            "margin-top": "22dp",
-            "margin-left": "10dp",
-        }, {
-            "type": "Text",
-            "font-size": "19px",
-            "color": "${data["+index+"].value_color}",
-            "text": "${data["+index+"].value}",
-            "text-align": "right",
-            "position": "relative",
-            "top": "-26dp",
-            "margin-right": "10dp"
-        }, 
-    ]
-})
-
-const rowItemTemplate = {
-    "type": "Container",
-    "height": "100dp",
-    "width": "100%",
-    "margin-bottom": "28dp",
-    "flex-direction": "row",
-    "items": [
-        itemTemplate(0), 
-        itemTemplate(1), 
-        itemTemplate(2), 
-        itemTemplate(3), 
-        itemTemplate(4)]
-}
-
-const left = ({data}) => ({
-    "type": "Container",
-    "height": "100%",
-    "width": "933dp",
-    "padding-left": '20dp',
-    "padding-top": '60dp',
-    "items": [
-        {
-            "type": "List",
-            "height": "100%",
-            "width": "100%",
-            "direction": "vertical",
-            "data": data,
-            "items": [rowItemTemplate]
-        }
-    ]
-})
-
-const cycleRequest = {
-    "onLoaded": [
-        {
-            "type": "Sequential",
-            "delayInMilliseconds": 10000,
-            "repeatCount": 1,
-            "commands": [
-                {
-                    "type": "SendEvent",
-                    "componentId": "REFRESH"
-                }
-            ]
-        }
-    ]
-}
-
 const link = 'http://dbp-resource.gz.bcebos.com/2428e786-8d60-d103-925a-55f1b4739400/'
 const btnTemplate = (id, active=false, img) => ({
     "type": "Container",
@@ -148,6 +61,8 @@ const right = {
 
 
 const {getdata} = require('./getdata');
+const {radar_tpl} = require('./render.js');
+
 
 module.exports = function render() {
     return new Promise((resolve, reject) => {
@@ -157,13 +72,16 @@ module.exports = function render() {
             const len = Math.floor(data.length /5)-1
             const data2 = [...Array(len).keys()].map(key =>
                 [data[key*5+0],data[key*5+1],data[key*5+2],data[key*5+3],data[key*5+4]])
+
+            const left = radar_tpl
+
             const doc = template(
-                [
-                    {
-                        ...body([left({ data: data2 }), right]),
-                        ...cycleRequest,
-                    }
-                ]
+                [body([
+                    left({
+                        data: data2 
+                    }), 
+                    right
+                ])]
             )
             const document = new Document(doc)
             const DPLDirective = new RenderDocument()
@@ -171,7 +89,6 @@ module.exports = function render() {
 
             resolve({
                 directives: [DPLDirective],
-                // outputSpeech: '测试一下'
             })
         })
     })
