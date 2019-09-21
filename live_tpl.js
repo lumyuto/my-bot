@@ -20,6 +20,7 @@ const left = {
             "width": "100%",
             "direction": "vertical",
             "background-color": '#fff',
+            "items": []
             // "items": [{
             //     "type": "Image",
             //     "width": "285dp",
