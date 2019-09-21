@@ -2,7 +2,7 @@
 
 const refreshTpl = require('./refresh_tpl.js');
 
-const itemTemplate = index => ({
+const rowItemTemplate = ({
     "type": "Container",
     "height": "30dp",
     "width": "100%",
@@ -11,24 +11,16 @@ const itemTemplate = index => ({
             "type": "Text",
             "font-size": "19px",
             "width": '100dp',
-            "text": '',//"${data.time}",
+            "text": "${data.time}",
             "margin-right": "10dp",
         }, {
             "type": "Text",
             "font-size": "19px",
             "width": '400dp',
-            "text": ''//"${data.title}",
+            "text": "${data.title}",
         }
     ]
 })
-
-const rowItemTemplate = {
-    "type": "Container",
-    "height": "100dp",
-    "width": "100%",
-    "margin-bottom": "5dp",
-    "items": [itemTemplate]
-}
 
 const left = ({data}) => ({
     "type": "Container",

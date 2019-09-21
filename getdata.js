@@ -31,7 +31,7 @@ function getNewsData() {
         resolve(
             results.map(_ => ({
                 time: _.time,
-                title: '',//_.title,
+                title: _.title,
             })))
         });
     })
