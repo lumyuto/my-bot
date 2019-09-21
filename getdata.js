@@ -17,7 +17,7 @@ function getdata() {
             title: _.name,
             active: _.active,
             value: Math.floor(_.value*10000)/100 + '%',
-            pos: _.value>0,
+            value_color: _.value>0 ? '#F2564E' : '#17A56B',
             factor: _.factor,
         })))
         });
