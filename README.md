@@ -1,6 +1,1 @@
-# my-bot
-
-http://192.168.99.165:8088/#/?activity_id=1055&c=3
-
-http://lumotian.rmb.rmb.otp.baidu.com/cashliveui/simpleboard.html#/?activity_id=1055&c=3
-
+http://qr.liantu.com/api.php?text=https%3A%2F%2Fgithub.com%2Flumyuto%2Fmy-bot
